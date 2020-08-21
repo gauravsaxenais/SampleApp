@@ -1,8 +1,0 @@
-﻿
-
-1) Controller name should always use the DbSet name of the entity that it provides CRUD operations for, 
-	if the controller is written to provide CRUDs for a single entity  
-
-2) If the entity name ends with 's' do not pluralize the DbSet name or the Controller name for that entity.  
-
-
