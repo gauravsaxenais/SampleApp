@@ -1,0 +1,316 @@
+{
+  "login": {
+    "title": "S'identifier",
+    "username": "Nom d'utilisateur...",
+    "password": "Mot de passe...",
+    "OrLogin": "Ou connectez-vous"
+  },
+  "site": {
+    "name": "Des noms",
+    "description": "La description",
+    "deleteTitle": "Êtes-vous sûr de vouloir supprimer ce site?",
+    "deleteText": "Vous ne pourriez pas revenir en arrière!",
+    "deleteButtonOkText": "Oui, supprimez-le!",
+    "extensionAllowedForImport": "Seule l'extension de fichier t3 est prise en charge pour le fichier d'importation.",
+    "title": "Site",
+    "importSite": "Site d'importation",
+    "addSite": "Ajouter un site",
+    "done": "terminé",
+    "mapView": "Vue de la carte",
+    "edit": "modifier"
+  },
+  "common": {
+    "nameRequired": "Le nom est requis.",
+    "errorMessage": "Quelque chose a mal tourné."
+  },
+  "loginHeader": {
+    "logIn": "s'identifier",
+    "language": "La langue",
+    "languages": "Langues",
+    "pleaseSelectALanguage": "Veuillez sélectionner une langue",
+    "cancel": "Annuler",
+    "oK": "D'accord",
+    "help": "Aidez-moi"
+
+  },
+  "jobHeader": {
+    "sites": "Des sites",
+    "language": "La langue",
+    "help": "Aidez-moi",
+    "logout": "Connectez - Out",
+    "languages": "Langues",
+    "pleaseSelectALanguage": "Veuillez sélectionner une langue",
+    "cancel": "Annuler",
+    "oK": "D'accord"
+  },
+  "siteEdit": {
+    "siteName": "Nom du site",
+    "createFrom": "Créer à partir de",
+    "templateList": "Liste des modèles",
+    "selectTemplate": "Sélectionnez un modèle",
+    "copyFrom": "Copier de",
+    "description": "La description",
+    "address": "Adresse",
+    "city": "Ville",
+    "stateProvince": "État/Province",
+    "country": "Pays",
+    "zipPostalCode": "Zip / code postal",
+    "createdBy": "Créé par",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "siteImportedSuccessfully": "site importé avec succès",
+    "siteNameExists": "Ce nom de site existe déjà."
+  },
+  "accessPoint": {
+    "accessPoints": "Points d'accès"
+  },
+  "chart": {
+    "chart": "Graphique",
+    "export": "Exportation"
+  },
+  "dashboard": {
+    "dashboard": "Tableau de bord",
+    "widgets": "WIDGETS",
+    "areYouSureYouWantToDeleteTheItem": "Voulez-vous vraiment supprimer l'élément?",
+    "youWouldNotBeAbleToRevertThis": "Vous ne pourriez pas revenir en arrière!",
+    "warning": "Attention",
+    "yesDeleteIt": "Oui, supprimez-le!",
+    "edit": "modifier",
+    "done": "terminé",
+    "addWidget": "Ajouter un widget"
+  },
+  "event": {
+    "event": "un événement",
+    "allSites": "Tous les sites",
+    "time": "Temps",
+    "eventDescription": "description de l'évenement",
+    "panel": "Panneau",
+    "site": "Site",
+    "action": "action",
+    "severity": "Gravité",
+    "description": "La description"
+  },
+  "chartOption": {
+    "chartOptions": "Options de graphique",
+    "pleaseProvideTitle": "Veuillez fournir le titre",
+    "pleaseSelectInterval": "Veuillez sélectionner un intervalle",
+    "cancel": "Annuler",
+    "save": "sauver",
+    "pleaseSelectChartType": "Veuillez sélectionner le type de graphique.",
+    "startEndDatesRequired": "La date de début et la date de fin sont obligatoires.",
+    "endDateNotGreater": "La date de fin ne doit pas être supérieure à la date actuelle.",
+    "endDateShouldBeGreater": "La date de fin doit être supérieure à la date de début.",
+    "startDateNotLess": "La date de début ne doit pas être inférieure à un mois.",
+    "title": "Titre",
+    "selectSite": "Sélectionnez le site",
+    "when": "Quand",
+    "onPanel": "Sur panneau",
+    "at": "À",
+    "duration": "Durée",
+    "startDateTime": "Date de début Heure",
+    "endDateTime": "Date de fin Heure",
+    "interval": "Intervalle",
+    "chartType": "Type de graphique"
+  },
+  "monitoringEvent": {
+    "time": "Temps",
+    "eventDescription": "description de l'évenement",
+    "panel": "Panneau",
+    "site": "Site"
+  },
+  "monitoringHeader": {
+    "sites": "Des sites",
+    "maps": "Plans",
+    "language": "La langue",
+    "help": "Aidez-moi",
+    "logout": "Connectez - Out",
+    "languages": "Langues",
+    "pleaseSelectALanguage": "Veuillez sélectionner une langue",
+    "cancel": "Annuler",
+    "oK": "D'accord"
+  },
+  "monitoringLeftPanel": {
+    "dashboard": "Tableau de bord",
+    "accessPoints": "Points d'accès",
+    "camera": "Caméra",
+    "chart": "Graphique",
+    "event": "un événement",
+    "maps": "Plans",
+    "system": "Système"
+  },
+  "monitoringSystem": {
+    "alarm": "Alarme",
+    "trouble": "Difficulté",
+    "systemNotNormal": "Système non normal",
+    "systemNormal": "Système normal"
+  },
+  "building": {
+    "buildingViewMap": "Bâtiment Voir la carte",
+    "edit": "modifier",
+    "goBackToSite": "Revenir au site"
+  },
+  "editBuilding": {
+    "addEditBuilding": "Ajouter/modifier un bâtiment",
+    "name": "prénom",
+    "description": "La description",
+    "numberOfFloors": "Nombre d'étages",
+    "buildingNumber": "Numéro du bâtiment",
+    "floorStackFile": "Fichier de pile de plancher",
+    "floorStackPicture": "Pile au sol Image",
+    "showcasePicture": "Image de vitrine",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "updateSiteMap": "Mettre à jour le plan du site",
+    "showcaseImages": "Seules les images jpg, png ang gif sont prises en charge pour le fichier vitrine.",
+    "floorstackImages": "Seules les images jpg, png ang gif sont prises en charge pour le fichier floorstack.",
+    "areyousureyouwanttodeletethisbuilding": "Voulez-vous vraiment supprimer ce bâtiment?",
+    "youwouldnotbeabletorevertthis": "Vous ne pourriez pas revenir en arrière!",
+    "yesDeleteIt": "Oui, supprimez-le!",
+    "ok": "D'ACCORD!",
+    "sitedeletionisnotallowed": "La suppression du site n'est pas autorisée.",
+    "pleaseselectthebuildingyouwanttoremove": "Veuillez sélectionner le bâtiment que vous souhaitez supprimer.",
+    "addBuilding": "Ajouter un bâtiment",
+    "remove": "Retirer",
+    "done": "terminé"
+  },
+  "editMap": {
+    "editMap": "Modifier la carte",
+    "componentLibrary": "BIBLIOTHÈQUE DES COMPOSANTS",
+    "inputs": "Contributions",
+    "accessPoints": "Points d'accès",
+    "cameras": "Appareils photo",
+    "buildings": "Bâtiments",
+    "title": "Titre",
+    "updateImage": "Mettre à jour l'image",
+    "removeImage": "Supprimer l'image",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "areYouSureYouWantToDeleteTheItem": "Voulez-vous vraiment supprimer l'élément?",
+    "youWouldNotBeAbleToRevertThis": "Vous ne pourriez pas revenir en arrière!",
+    "warning": "Attention",
+    "yesDeleteIt": "Oui, supprimez-le!"
+  },
+  "floor": {
+    "floorMapView": "Affichage de la carte de l'étage"
+  },
+  "siteMap": {
+    "siteMap": "Plan du site",
+    "edit": "modifier",
+    "images": "Images"
+  },
+  "siteShowCase": {
+    "maps": "Plans"
+  },
+  "system": {
+    "systemNotNormal": "Système non normal",
+    "systemNormal": "Système normal",
+    "alarm": "Alarme",
+    "trouble": "Difficulté",
+    "panelName": "Nom du panneau",
+    "status": "Statut",
+    "model": "Modèle",
+    "version": "Version",
+    "panelDetails": "Détails du panneau",
+    "type": "Type",
+    "firmware": "Firmware",
+    "hardware": "Matériel",
+    "rS485Address": "Adresse RS485",
+    "iPAddress": "adresse IP",
+    "serialNumber": "Numéro de série",
+    "lastChanged": "Dernière modification",
+    "touchSoftware": "Logiciel tactile",
+    "touchHardware": "Matériel tactile",
+    "touchDatabase": "Base de données tactile",
+    "touchGUID": "Appuyez sur GUID",
+    "wANIPAddress": "Adresse IP WAN",
+    "oK": "D'accord"
+  },
+  "siteMapView": {
+    "searchError": "Désolé, cette recherche n'a donné aucun résultat.",
+    "noDataMessage": "Aucune donnée n'existe pour ce site."
+  },
+  "help": {
+    "contactUs": "CONTACTEZ NOUS",
+    "phone": "Tél. : 905-660-4655",
+    "tollFree": "Sans frais: 888-647-2665",
+    "fax": "Télécopieur: 905-660-4113",
+    "customerSupport": "Client de service: ",
+    "technicalSupport": "Technique de support: ",
+    "websiteSupport": "Support de site Web: ",
+    "customerSupportMail": "customercare@micromgroup.com",
+    "technicalSupportMail": " technicalsupport@micromgroup.com",
+    "websiteSupportMail": " webmaster@micromgroup.com"
+  },
+  "camera": {
+    "camera": "Caméra",
+    "recordedFeedProperties": "Propriétés du flux enregistré",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "editCamera": "Modifier la caméra",
+    "componentLibrary": "BIBLIOTHÈQUE DES COMPOSANTS",
+    "tabInfo": "Informations sur l'onglet",
+    "cameraProperties": "Propriétés de la caméra",
+    "archiveStartDateTime": "Date de début d'archivage Heure",
+    "label": "Étiquette",
+    "layout": "Disposition",
+    "name": "prénom",
+    "areyousureyouwanttodeletethistab": "Voulez-vous vraiment supprimer cet onglet?",
+    "youWouldNotBeAbleToRevertThis": "Vous ne pourriez pas revenir en arrière!",
+    "yesDeleteIt": "Oui, supprimez-le!",
+    "areyousureyouwanttodeletethisframe": "Voulez-vous vraiment supprimer cet appareil photo du cadre?",
+    "somethingwentwrongintheapi": "Quelque chose s'est mal passé dans l'API",
+    "unabletoshowcamerafeed": "Impossible d'afficher le flux de la caméra",
+    "cameraStreamAlreadyAdded": "La caméra est déjà placée",
+    "selectLayout": "Sélectionnez la mise en page",
+    "tabPopUp": "Tab PopUp",
+    "pleaseDonotDeleteAllTabs": "Veuillez ne pas supprimer tous les onglets. Un onglet doit exister.",
+    "changeLayoutError": "Vous sélectionnez la disposition moins que les caméras placées à l'intérieur, supprimez d'abord les caméras, puis modifiez la disposition"
+  },
+  "enums": {
+    "accessPointWebCmd": {
+      "Grant Access": "Accorder l'accès",
+      "UnLock Mode ON": "Mode de déverrouillage activé",
+      "UnLock Mode OFF": "Déverrouiller le mode OFF",
+      "High Sec Mode ON": "Mode High Sec activé",
+      "High Sec Mode OFF": "Mode High Sec désactivé",
+      "Camera": "Caméra",
+      "Map": "Carte"
+    },
+    "eventType": {
+      "All Events": "Tous les évènements",
+      "Alarms Only": "Alarmes uniquement",
+      "Warnings Only": "Avertissements uniquement",
+      "Alarms and Warnings": "Alarmes et avertissements"
+    },
+    "floorLabelActions": {
+      "Edit": "modifier",
+      "Copy": "Copie",
+      "Paste": "Coller",
+      "Delete": "Supprimer",
+      "Insert Above": "Insérer au-dessus",
+      "Insert Below": "Insérer ci-dessous",
+      "Cut": "Couper"
+    },
+    "chartOptionDuration": {
+      "Last 10 minutes": "10 dernières minutes",
+      "Last 1 hour": "1 dernière heure",
+      "Last 24 hours": "24 dernières heures",
+      "Yesterday": "Hier",
+      "Custom": "Douane"
+    },
+    "chartOptionIntervalUnitName": {
+      "Minutes": "Minutes",
+      "Seconds": "Secondes",
+      "Hours": "Heures",
+      "Day": "journée"
+    },
+    "chartOptionChartType": {
+      "Line": "Ligne"
+    },
+    "languages": {
+      "en": "English",
+      "fr-ca": "French"
+    }
+  }
+
+}

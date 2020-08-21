@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+  <String Id="Company">Mircom</String>
+
+  <String Id="ProductNameFolder">Mircom API</String>
+  
+	<String Id="ProductName_x86">Mircom API (32 bit)</String>
+  <String Id="ProductName_x64">Mircom API (64 bit)</String>
+
+  <String Id="Description">Mircom API</String>
+  <String Id="Comments">Mircom API installed as a Service. This service serves as a backend for Mircom UI service.</String>
+  <String Id="Keywords">Mircom API, Windows Service, Installer.</String>
+  
+  <String Id="DowngradeErrorMessage">A newer version of Mircom API is already installed.</String>
+  
+  <String Id="Language">1033</String>
+  
+</WixLocalization>

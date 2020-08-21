@@ -1,0 +1,50 @@
+{
+  "title": "Access Granted Chart",
+  "siteId": 5,
+  "siteData": {
+    "reportGuid": "ad5051eb-9d85-476d-b4e6-72f7bff0cbf2",
+    "title": "Access Granted Chart",
+    "siteName": "SampleApp Test Site",
+    "siteId": 5,
+    "panelItemId": 0,
+    "panelItemType": 0,
+    "panelGuid": null,
+    "eventType": {
+    },
+    "chartType": {
+      "0": "Line"
+    },
+    "reportType": {
+      "0": "LiveChart",
+      "1": "Chart",
+      "2": "EventLog",
+      "3": "People",
+      "4": "Credentials",
+      "5": "Residents",
+      "6": "Saved"
+    },
+    "eventTypeId": 100,
+    "chartTypeId": 0,
+    "reportTypeId": 0,
+    "intervalDetails": null,
+    "durationDetails": [],
+    "refreshInterval": 5400,
+    "radioTime": 3,
+    "intervalId": 12,
+    "customTimeBegin": null,
+    "customTimeEnd": null,
+    "eventInfos": []
+  },
+  "eventTypeId": 100,
+  "panelGuid": "",
+  "panelItemId": 0,
+  "chartTypeId": "0",
+  "radioTime": 3,
+  "intervalId": 12,
+  "panelItemType": 0,
+  "customTimeBegin": null,
+  "customTimeEnd": null,
+  "reportGuid": "ad5051eb-9d85-476d-b4e6-72f7bff0cbf2",
+  "reportTypeId": 0,
+  "intervalDetails": "3_Hours"
+}

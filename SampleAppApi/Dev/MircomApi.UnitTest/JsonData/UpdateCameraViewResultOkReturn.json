@@ -1,0 +1,246 @@
+[
+  {
+    "jobId": 5,
+    "viewId": 1,
+    "viewGuid": "efae2c16-afbc-4226-9778-dfba8c267b8f",
+    "name": "Default",
+    "viewNum": 0,
+    "layoutID": 4,
+    "popX": 0,
+    "popY": 0,
+    "popWidth": 0,
+    "popHeight": 0,
+    "cameraViewItems": [
+      {
+        "jobID": 5,
+        "viewID": 1,
+        "camNum": 1,
+        "channelGuid": "1a3e58de-8b68-41a2-b8c9-86a0a1873760",
+        "name": "Camera",
+        "serverId": 2,
+        "channelId": 1,
+        "label": null,
+        "action": 0,
+        "url": "10.101.20.65",
+        "serverType": 0,
+        "username": "admin",
+        "password": "",
+        "serverName": "VM server 2",
+        "serverGUID": "e3a95d8e-10fa-45b8-824c-db0a61683158",
+        "isStreamed": true,
+        "isExecuted": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 2,
+        "viewID": 1,
+        "isNotExistInDb": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 3,
+        "viewID": 1,
+        "isNotExistInDb": true
+      },
+      {
+        "jobID": 5,
+        "viewID": 1,
+        "camNum": 4,
+        "channelGuid": "d545c171-362b-4a12-8533-a6403fe41a16",
+        "name": "Camera",
+        "serverId": 2,
+        "channelId": 3,
+        "label": null,
+        "action": 0,
+        "url": "10.101.20.65",
+        "serverType": 0,
+        "username": "admin",
+        "password": "",
+        "serverName": "VM server 2",
+        "serverGUID": "e3a95d8e-10fa-45b8-824c-db0a61683158",
+        "isStreamed": true
+      }
+    ],
+    "action": 0,
+    "serverId": 0,
+    "url": null,
+    "serverType": 0,
+    "username": null,
+    "password": null,
+    "serverName": null,
+    "serverGUID": "00000000-0000-0000-0000-000000000000",
+    "isUsedCount": 1,
+    "updatedCameraViewItems": [
+      {
+        "jobID": 5,
+        "viewID": 1,
+        "camNum": 1,
+        "channelGuid": "1a3e58de-8b68-41a2-b8c9-86a0a1873760",
+        "name": "Camera",
+        "serverId": 2,
+        "channelId": 1,
+        "label": null,
+        "action": 0,
+        "url": "10.101.20.65",
+        "serverType": 0,
+        "username": "admin",
+        "password": "",
+        "serverName": "VM server 2",
+        "serverGUID": "e3a95d8e-10fa-45b8-824c-db0a61683158",
+        "isStreamed": true,
+        "isExecuted": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 2,
+        "viewID": 1,
+        "isNotExistInDb": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 3,
+        "viewID": 1,
+        "isNotExistInDb": true
+      },
+      {
+        "jobID": 5,
+        "viewID": 1,
+        "camNum": 4,
+        "channelGuid": "d545c171-362b-4a12-8533-a6403fe41a16",
+        "name": "Camera",
+        "serverId": 2,
+        "channelId": 3,
+        "label": null,
+        "action": 0,
+        "url": "10.101.20.65",
+        "serverType": 0,
+        "username": "admin",
+        "password": "",
+        "serverName": "VM server 2",
+        "serverGUID": "e3a95d8e-10fa-45b8-824c-db0a61683158",
+        "isStreamed": true
+      }
+    ]
+  },
+  {
+    "jobId": 5,
+    "viewId": 3,
+    "viewGuid": "262cd7f4-bdd9-4259-8472-f0053ba8ca07",
+    "name": "aaa",
+    "viewNum": 0,
+    "layoutID": 5,
+    "popX": 0,
+    "popY": 0,
+    "popWidth": 0,
+    "popHeight": 0,
+    "cameraViewItems": [
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 1,
+        "viewID": 3,
+        "isNotExistInDb": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 2,
+        "viewID": 3,
+        "isNotExistInDb": true
+      },
+      {
+        "jobID": 5,
+        "viewID": 3,
+        "camNum": 3,
+        "channelGuid": "e1066426-eb63-4023-a475-adebf6d49a65",
+        "name": "Camera",
+        "serverId": 1,
+        "channelId": 2,
+        "label": null,
+        "action": 0,
+        "url": "10.101.20.65",
+        "serverType": 0,
+        "username": "admin",
+        "password": "",
+        "serverName": "VM server 1",
+        "serverGUID": "deb54272-0fd0-43a7-b713-7d0500c26f1a",
+        "isStreamed": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 4,
+        "viewID": 3,
+        "isNotExistInDb": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 5,
+        "viewID": 3,
+        "isNotExistInDb": true
+      }
+    ],
+    "action": 0,
+    "serverId": 0,
+    "url": null,
+    "serverType": 0,
+    "username": null,
+    "password": null,
+    "serverName": null,
+    "serverGUID": "00000000-0000-0000-0000-000000000000",
+    "isUsedCount": 0,
+    "updatedCameraViewItems": [
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 1,
+        "viewID": 3,
+        "isNotExistInDb": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 2,
+        "viewID": 3,
+        "isNotExistInDb": true
+      },
+      {
+        "jobID": 5,
+        "viewID": 3,
+        "camNum": 3,
+        "channelGuid": "e1066426-eb63-4023-a475-adebf6d49a65",
+        "name": "Camera",
+        "serverId": 1,
+        "channelId": 2,
+        "label": null,
+        "action": 0,
+        "url": "10.101.20.65",
+        "serverType": 0,
+        "username": "admin",
+        "password": "",
+        "serverName": "VM server 1",
+        "serverGUID": "deb54272-0fd0-43a7-b713-7d0500c26f1a",
+        "isStreamed": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 4,
+        "viewID": 3,
+        "isNotExistInDb": true
+      },
+      {
+        "action": 0,
+        "JobID": 5,
+        "camNum": 5,
+        "viewID": 3,
+        "isNotExistInDb": true
+      }
+    ]
+  }
+]

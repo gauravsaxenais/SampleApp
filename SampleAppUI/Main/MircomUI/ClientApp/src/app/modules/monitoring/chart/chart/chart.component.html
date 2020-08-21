@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="section-heading"> <h5> <span> <i class="material-icons">  show_chart  </i> </span>{{ 'chart.chart' | translate }} </h5> </div>
+  <div class="col-md-12 bottom-space" *ngIf="!isExpandable">
+    <div class="headerMenuIcons">
+      <a mat-raised-button class="btn btn-raised btn-info" (click)="openDialog()"> <i class="material-icons icon-white">edit</i></a>
+      <a mat-raised-button class="btn btn-raised btn-info" title="{{ 'chart.export' | translate }}" [matMenuTriggerFor]="menu"> <i class="material-icons icon-white"> exit_to_app </i></a>
+    </div>
+    <mat-menu #menu="matMenu">
+      <span (click)="onExportOptionClick($event, export)" *ngFor="let export of chartExportOptionsKeys()" mat-menu-item> {{export}} </span>
+    </mat-menu>
+    <div class="left-side-container">
+      <div class="card card-chart">
+        <div class="card-header card-header-icon card-header-danger">
+          <div class="card-text card2-color">
+            <h4 class="card-title">{{chartCaption}}</h4>
+          </div>
+        </div>
+        <div class="card-body table-responsive">
+          <app-monitoring-access-granted-chart [isDashboard]="isDashboard" (outputChartData)="eventChartDataBindHandler($event)"></app-monitoring-access-granted-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [ngClass]="isExpandable?'row':'row fixedfooter'">
+  <div class="col-md-12">
+    <app-monitoring-event [eventsData]="eventsData" (eventExpandableChanged)="eventExpandableChangedHandler($event)"></app-monitoring-event>
+  </div>
+</div>
+
+
+

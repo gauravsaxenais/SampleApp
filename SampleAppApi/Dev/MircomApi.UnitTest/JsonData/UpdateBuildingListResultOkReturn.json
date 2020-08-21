@@ -1,0 +1,279 @@
+[
+  {
+    "buildingId": 0,
+    "buildingGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f158",
+    "siteId": 9,
+    "name": "Test site 2",
+    "number": 0,
+    "slots": 1,
+    "type": "SiteMap",
+    "floorStackFile": "",
+    "floorStackImage": null,
+    "showcaseFile": "http://localhost:60967/stock/images/maps/3058f837-a55a-435d-88a5-bfd391e9407f.jpeg",
+    "showcaseFileImage": null,
+    "floors": [
+      {
+        "name": "Test site 2",
+        "description": null,
+        "slotNo": 0,
+        "mapGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f159",
+        "mapId": 0,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/Sitemap.jpg",
+        "action": 0,
+        "mapItems": [
+          {
+            "siteId": 9,
+            "mapId": 0,
+            "mapItemId": 0,
+            "itemId": 0,
+            "itemGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f157",
+            "panelGuid": null,
+            "name": "Main Building",
+            "notes": "Main Building",
+            "type": "Unknown",
+            "x": 69,
+            "y": 28,
+            "buildingId": null,
+            "action": null
+          },
+          {
+            "siteId": 9,
+            "mapId": 0,
+            "mapItemId": 1,
+            "itemId": 0,
+            "itemGuid": "af30f985-3e77-4bc5-8eaa-62ca11a7bf22",
+            "panelGuid": null,
+            "name": "North wing",
+            "notes": "North wing",
+            "type": "Unknown",
+            "x": 47,
+            "y": 35,
+            "buildingId": null,
+            "action": null
+          },
+          {
+            "siteId": 9,
+            "mapId": 0,
+            "mapItemId": 2,
+            "itemId": 0,
+            "itemGuid": "9dde48b7-af4b-4122-9fb6-62fab3845ce9",
+            "panelGuid": null,
+            "name": "South wing",
+            "notes": "South wing",
+            "type": "Unknown",
+            "x": 19,
+            "y": 58,
+            "buildingId": null,
+            "action": null
+          }
+        ]
+      }
+    ],
+    "action": 0,
+    "description": "test for site",
+    "buildingSerialNumber": 1,
+    "typeParseId": 0,
+    "isSelectedBuilding": false
+  },
+  {
+    "buildingId": 1,
+    "buildingGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f157",
+    "siteId": 9,
+    "name": "Main building",
+    "number": 1,
+    "slots": 3,
+    "type": "Building",
+    "floorStackFile": "",
+    "floorStackImage": null,
+    "showcaseFile": "",
+    "showcaseFileImage": null,
+    "floors": [
+      {
+        "name": "Main Ground FL",
+        "description": null,
+        "slotNo": 0,
+        "mapGuid": "882990f9-e8cb-46f9-8d41-9bc5c56ebbf7",
+        "mapId": 1,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/MainGround.png",
+        "action": 0,
+        "mapItems": [
+          {
+            "siteId": 9,
+            "mapId": 1,
+            "mapItemId": 3,
+            "itemId": 0,
+            "itemGuid": null,
+            "panelGuid": "73eddc04-a6b1-4458-a18b-f490d97e117f",
+            "name": "Reader A",
+            "notes": "Entrance door",
+            "type": "Offline",
+            "x": 40,
+            "y": 10,
+            "buildingId": null,
+            "action": null
+          },
+          {
+            "siteId": 9,
+            "mapId": 1,
+            "mapItemId": 4,
+            "itemId": 1,
+            "itemGuid": null,
+            "panelGuid": "74eddc04-a6b1-4458-a18b-f490d97e117f",
+            "name": "Reader B",
+            "notes": "Side door",
+            "type": "Offline",
+            "x": 75,
+            "y": 45,
+            "buildingId": null,
+            "action": null
+          }
+        ]
+      },
+      {
+        "name": "North Ground FL",
+        "description": null,
+        "slotNo": 1,
+        "mapGuid": "68fb5866-4e98-4266-8f74-9dd8a3ffb26d",
+        "mapId": 4,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/NorthGround.png",
+        "action": 0,
+        "mapItems": [
+          {
+            "siteId": 9,
+            "mapId": 4,
+            "mapItemId": 1,
+            "itemId": 2,
+            "itemGuid": null,
+            "panelGuid": "75eddc04-a6b1-4458-a18b-f490d97e117f",
+            "name": "Input 3",
+            "notes": "North Gnd door",
+            "type": "Normal",
+            "x": 60,
+            "y": 60,
+            "buildingId": null,
+            "action": null
+          }
+        ]
+      },
+      {
+        "name": "South Ground FL",
+        "description": null,
+        "slotNo": 2,
+        "mapGuid": "a79b4ae1-5eb2-49ff-9602-a8ef1b3055d4",
+        "mapId": 6,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/SouthGround.png",
+        "action": 0,
+        "mapItems": [
+          {
+            "siteId": 9,
+            "mapId": 6,
+            "mapItemId": 1,
+            "itemId": 3,
+            "itemGuid": null,
+            "panelGuid": "76eddc04-a6b1-4458-a18b-f490d97e117f",
+            "name": "Input 4",
+            "notes": "South Gnd door",
+            "type": "Normal",
+            "x": 18,
+            "y": 42,
+            "buildingId": null,
+            "action": null
+          }
+        ]
+      }
+    ],
+    "action": 0,
+    "description": "Main building",
+    "buildingSerialNumber": 2,
+    "typeParseId": 1,
+    "isSelectedBuilding": false
+  },
+  {
+    "buildingId": 2,
+    "buildingGuid": "af30f985-3e77-4bc5-8eaa-62ca11a7bf22",
+    "siteId": 9,
+    "name": "North wing",
+    "number": 2,
+    "slots": 3,
+    "type": "Building",
+    "floorStackFile": "",
+    "floorStackImage": null,
+    "showcaseFile": "",
+    "showcaseFileImage": null,
+    "floors": [
+      {
+        "name": "Main 2nd FL",
+        "description": null,
+        "slotNo": 0,
+        "mapGuid": "e994e5df-797c-46f1-bde3-f2d3fa861331",
+        "mapId": 2,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/Main2nd.png",
+        "action": 0,
+        "mapItems": []
+      },
+      {
+        "name": "North 2nd FL",
+        "description": null,
+        "slotNo": 1,
+        "mapGuid": "c4068a73-85a5-4ebf-bf37-d66047a3c140",
+        "mapId": 5,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/North2nd.png",
+        "action": 0,
+        "mapItems": []
+      },
+      {
+        "name": "South 2nd FL",
+        "description": null,
+        "slotNo": 2,
+        "mapGuid": "07b0e30c-756f-45a4-a8f9-828118bc6fe2",
+        "mapId": 7,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/South2nd.png",
+        "action": 0,
+        "mapItems": []
+      }
+    ],
+    "action": 0,
+    "description": "North wing",
+    "buildingSerialNumber": 3,
+    "typeParseId": 1,
+    "isSelectedBuilding": false
+  },
+  {
+    "buildingId": 3,
+    "buildingGuid": "9dde48b7-af4b-4122-9fb6-62fab3845ce9",
+    "siteId": 9,
+    "name": "South wing",
+    "number": 3,
+    "slots": 1,
+    "type": "Building",
+    "floorStackFile": "",
+    "floorStackImage": null,
+    "showcaseFile": "",
+    "showcaseFileImage": null,
+    "floors": [
+      {
+        "name": "Main 3rd FL",
+        "description": null,
+        "slotNo": 0,
+        "mapGuid": "7e0423cf-ac7d-4762-9e4b-eb626ea7d177",
+        "mapId": 3,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/Main3rd.png",
+        "action": 0,
+        "mapItems": []
+      }
+    ],
+    "action": 0,
+    "description": "South wing",
+    "buildingSerialNumber": 4,
+    "typeParseId": 1,
+    "isSelectedBuilding": false
+  }
+]

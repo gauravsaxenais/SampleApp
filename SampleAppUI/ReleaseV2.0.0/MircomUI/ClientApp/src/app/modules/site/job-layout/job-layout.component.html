@@ -1,0 +1,22 @@
+<div class="nav-outer-div">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div mat-icon-button aria-label="Example icon-button with a menu"
+         style="width:100%;padding:0px 20px">
+      <mat-icon [matMenuTriggerFor]="menu" class="hamburger_menu">view_headline</mat-icon>
+     
+    </div>
+    <mat-menu #menu="matMenu">
+     <app-job-header></app-job-header>
+    </mat-menu>
+  </nav>
+</div>
+
+<div class="content-wrapper">
+  <div class="main-content">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,38 @@
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+  .column h2 {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+.mat-menu-item {
+  line-height: 35px !important;
+  height: 35px !important;
+}
+
+.alarmCls {
+  color: red;
+}
+
+  .alarmCls:hover {
+    color: red;
+  }
+
+.warningCls {
+  color: brown !important;
+}
+
+  .warningCls:hover {
+    color: brown !important;
+  }
+@media screen and (max-width: 359px) and (min-width: 320px) {
+  .column {
+    float: left;
+    padding: 3px;
+  }
+}

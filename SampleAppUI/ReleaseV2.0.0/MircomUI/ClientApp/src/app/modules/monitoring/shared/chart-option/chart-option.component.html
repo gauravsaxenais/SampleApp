@@ -1,0 +1,90 @@
+<button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="close()">
+  <i class="material-icons">close</i>
+</button>
+<h4 mat-dialog-title>{{ 'chartOption.chartOptions' | translate }}</h4>
+<ng-container *ngIf="form">
+    <mat-dialog-content [formGroup]="form" novalidate>
+      <div class="row" *ngIf="errorMessageOnEditChartPopUp">
+        <div class="alert alert-danger">
+          {{errorMessageOnEditChartPopUp}}
+        </div>
+      </div>
+      <mat-form-field>
+        <input matInput placeholder="{{ 'chartOption.title' | translate }}" required formControlName="title">
+        <mat-error *ngIf="form.get('title').hasError('required')">
+          {{ 'chartOption.pleaseProvideTitle' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="{{ 'chartOption.selectSite' | translate }}" formControlName="siteData">
+          <mat-option [value]="chartOptionsData">
+            {{ chartOptionsData.siteName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="eventTypesList">
+        <mat-select placeholder="{{ 'chartOption.when' | translate }}" formControlName="eventTypeId" (selectionChange)="onEventTypeChange($event.value)">
+          <mat-option *ngFor="let event of chartOptionsData.eventInfos" [value]="event.key">
+            {{event.prefix}}: {{event.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="panelsList.length > 0">
+        <mat-select placeholder="{{ 'chartOption.onPanel' | translate }}" formControlName="panelGuid" (selectionChange)="onPanelChange($event.value)">
+          <mat-option *ngFor="let panel of panelsList" [value]="panel.panelsGuid">
+            {{panel.panelsName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="panelItemsList.length > 0">
+        <mat-select placeholder="{{ 'chartOption.at' | translate }} {{eventTypeLabel}}" formControlName="panelItemId">
+          <mat-option *ngFor="let panelItem of panelItemsList" [value]="panelItem.panelItemId">
+            {{panelItem.itemsName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="{{ 'chartOption.duration' | translate }}" formControlName="radioTime" (selectionChange)="onDurationChange($event.value)">
+          <mat-option *ngFor="let dur of chartOptionsData.durationDetails" [value]="dur.id">
+            {{("enums.chartOptionDuration." + dur.durationName) | translate}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field *ngIf="showStartEndDate">
+        <input matInput readonly [min]="min" [max]="max" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="{{ 'chartOption.startDateTime' | translate }}" formControlName="customTimeBegin" (dateTimeInput)="onDateTimeChange($event.value)">
+        <owl-date-time #dt1></owl-date-time>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="showStartEndDate">
+        <input matInput readonly [max]="max" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="{{ 'chartOption.endDateTime' | translate }}" formControlName="customTimeEnd" (dateTimeInput)="onDateTimeChange($event.value)">
+        <owl-date-time #dt2></owl-date-time>
+      </mat-form-field>
+      <mat-form-field *ngIf="intervalData && showInterval">
+        <mat-select placeholder="{{ 'chartOption.interval' | translate }}" formControlName="intervalId" (selectionChange)="onIntervalChange($event.value)">
+          <mat-option *ngFor="let inter of intervalData" [value]="inter.intervalId">
+            {{inter.interval}} {{("enums.chartOptionIntervalUnitName." + inter.unitName) | translate}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.controls.intervalId.errors?.required">
+          {{ 'chartOption.pleaseSelectInterval' | translate }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="{{ 'chartOption.chartType' | translate }}" formControlName="chartTypeId">
+          <mat-option *ngFor="let chart of chartTypeKeys()" [value]="chart">
+            {{("enums.chartOptionChartType." + chartOptionsData.chartType[chart]) | translate}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button class="mat-raised-button" (click)="close()"> {{ 'chartOption.cancel' | translate }}</button>
+      <button mat-raised-button class="mat-raised-button mat-primary" (click)="save()" > {{ 'chartOption.save' | translate }}</button>
+    </mat-dialog-actions>
+</ng-container>

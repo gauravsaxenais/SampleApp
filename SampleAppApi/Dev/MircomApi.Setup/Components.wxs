@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <Fragment>
+    
+    <!-- Product Components -->
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      
+      <!-- Test file -->
+      <ComponentRef Id="MainAppShortcut" />
+      
+    </ComponentGroup>
+    
+    <!-- Installed files -->
+    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\MircomApi\bin\$(var.Configuration)\netcoreapp2.2\win7-$(var.Platform)\publish\">
+      
+      <Component Id="MainAppShortcut" Guid="{A67820C9-CCF9-40CF-B95C-BDAB31472897}">
+
+        <Shortcut Id="MainAppShortcut"
+                  Name="!(loc.ProductName_$(var.Platform))"
+                  Target="[INSTALLFOLDER]MircomApi.exe"
+                  Directory="InstallProgramMenuFolder"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="icon.ico" 
+                  />
+        
+        <!-- Our unique key for this component/shorcut -->
+        <RegistryValue Id="RegShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.ProductNameFolder)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes" />
+
+        <!-- Remove start menu items -->
+        <RemoveFolder Id="RemoveStartMenu" Directory="InstallProgramMenuFolder" On="uninstall" />
+        
+      </Component>
+
+    </DirectoryRef>
+    
+  </Fragment>
+  
+  
+</Wix>

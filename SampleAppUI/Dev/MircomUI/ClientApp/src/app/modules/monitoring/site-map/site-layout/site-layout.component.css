@@ -1,0 +1,46 @@
+
+
+/*Navigation menu bar css*/
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.nav-outer-div {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar.bg-primary {
+  background-color: #015697 !important;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.mat-icon {
+  cursor: pointer;
+}
+
+.logo img {
+  margin-top: -5px;
+}
+
+.language_icon {
+  float: right;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.hamburger_menu {
+  float: left;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.content-wrapper {
+  width: 100%;
+  float: left;
+  top: 0px;
+  margin-top: 60px;
+}

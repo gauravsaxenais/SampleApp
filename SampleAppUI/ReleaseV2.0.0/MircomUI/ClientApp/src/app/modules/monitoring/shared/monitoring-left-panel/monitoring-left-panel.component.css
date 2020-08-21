@@ -1,0 +1,58 @@
+.sidebar {
+  background-image: url("/assets/img/mircom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .sidebar .user {
+    padding-bottom: 20px;
+    margin: 75px auto 0;
+    position: relative;
+  }
+
+  .sidebar .nav p {
+    margin: 0;
+    line-height: 27px;
+    font-size: 16px;
+    position: relative;
+    display: block;
+    height: auto;
+    white-space: nowrap;
+  }
+  .sidebar .sidebar-wrapper {
+    width: 100% !important
+  }
+  .sidebar{
+    width: 15% !important
+  }
+    .sidebar .sidebar-wrapper {
+      overflow: hidden !important;
+    }
+a.username:hover {
+  text-decoration: none;
+}
+.sidebar.user a {
+  cursor: text !important;
+}
+      .sidebar.user a:hover {
+
+      cursor:text !important;}
+a.username {
+  cursor: text;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width:1000px) {
+  .sidebar {
+    width: 20% !important
+  }
+}
+
+ @media screen and (max-width: 1500px) and (min-width:1024px) {
+        .table-container {
+    width: 100%;
+    position: static;
+    bottom: 0;
+    padding-right: 0px;
+  }
+}

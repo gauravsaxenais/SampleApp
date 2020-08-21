@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="headerMenuIcons">
+    <a mat-raised-button class="btn btn-raised btn-info" title="{{ 'site.mapView' | translate }}" (click)="redirectToSiteMapView($event)"> <i class="material-icons icon-white">map</i></a>
+    <a mat-raised-button class="btn btn-raised btn-info" title="{{ 'site.edit' | translate }}" (click)="redirectToEditSite($event)"> <i class="material-icons icon-white">edit</i></a>
+  </div>
+</div>
+
+<div class="site-container">
+  <div class="mat-elevation-z8">
+    <table mat-table #table [dataSource]="dataSource" matSort>
+
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'site.name' | translate }} </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="siteImage"> <img src={{element.images}}> </span>
+          {{element.name}}
+        </td>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'site.description' | translate }} </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}}</td>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="rowSelectedArrow">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button (click)="selectSite($event,element)" *ngIf="element.mapGuid !== '00000000-0000-0000-0000-000000000000'" >
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>
+         
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns">   </tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{ 'lastSiteHighlight': row.id == selectedSiteId }"> </tr>
+    </table>
+  </div>
+</div>

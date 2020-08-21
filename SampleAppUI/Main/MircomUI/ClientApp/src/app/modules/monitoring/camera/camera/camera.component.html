@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="section-heading">
+    <h5> <span> <i class="material-icons">camera_alt</i></span>{{ 'camera.camera' | translate }} </h5>
+  </div>
+  <div class="headerMenuIcons">
+    <a title="{{ 'camera.tabPopUp' | translate }}" (click)="fullScreenWithNewTab($event)"> <i class="material-icons icon-white">fullscreen</i></a> &nbsp; &nbsp;
+    <a title="{{ 'camera.editCamera' | translate }}" (click)="redirectToEditCamera($event)"> <i class="material-icons icon-white">edit</i></a>
+  </div>
+
+  <div class="col-md-12 bottom-space" *ngIf="!isExpandable">
+    <div class="left-side-container">
+      <div class="card card-chart">
+        <div class="card-header card-header-icon card-header-danger">
+          
+          <mat-tab-group style="width:100%" *ngIf="cameraData" (selectedTabChange)="onCameraTabsChange($event)">
+            <ng-container *ngFor="let camData of cameraData; let camIndex = index">
+              <mat-tab label="{{camData.name}}">
+                <div class="places-sweet-alerts" style="overflow:hidden">
+                  <div class="row camera-container">
+                    <div [id]="'cameraLayoutId_'+camViewItem.channelGuid" [class]="camViewItem.channelGuid ? 'col-lg-4 col-sm-12 camera-layout' : 'col-lg-4 col-sm-12 camera-layout-without-video'" #allCameras *ngFor="let camViewItem of camData.cameraViewItems" (mouseenter)="mouseEnter('controls_'+camViewItem.channelGuid, camViewItem.channelGuid)"
+                           (mouseleave)="mouseLeave('controls_'+camViewItem.channelGuid, camViewItem.channelGuid)">
+                      <div [id]="'div_'+camViewItem.channelGuid" style="overflow: hidden;" *ngIf="camViewItem">
+                        <span class="loader" *ngIf="camViewItem.channelGuid" [id]="'streamLoader_'+camViewItem.channelGuid" style="display:block;"></span>
+                        <video style="display:none;" [id]="camViewItem.channelGuid" width="100%" height="100%" autoplay="autoplay" class="videoStyleCls"></video>
+                        <div [id]="'overlay_'+camViewItem.channelGuid">
+                          <span style="display:none;" [id]="'stage_'+camViewItem.channelGuid" #stage>
+                          </span>
+                          <span class="cameraFrameMessage" [id]="'errorMessageOnCameraFrame_'+camViewItem.channelGuid" style="display:none;">{{ 'camera.unabletoshowcamerafeed' | translate }}</span>
+                          <span class="cameraFrameMessage" [id]="'alreadyStreamedOnCameraFrame_'+camViewItem.channelGuid" style="display:none;">{{ 'camera.cameraStreamAlreadyAdded' | translate }}</span>
+                          <div style="display:none;" [id]="'controls_'+camViewItem.channelGuid">
+                            <div id="change">
+                              <span class="cameraNameCls">{{camViewItem.name}}</span>
+                              <button class="pause"><i class="material-icons">pause_arrow</i></button>
+                              <button class="zoomin"><i class="material-icons">zoom_in</i></button>
+                              <button class="zoomout"><i class="material-icons">zoom_out</i></button>
+                              <button type="button" class="reset"><i class="material-icons">settings_backup_restore</i></button>
+                              <button class="left"><i class="material-icons">keyboard_arrow_left</i></button>
+                              <button class="right"><i class="material-icons">keyboard_arrow_right</i></button>
+                              <button type="button" class="full-screen"><i class="material-icons">fullscreen</i></button>
+                              <button type="button" data-toggle="modal" data-target="#recordedPropertiesModal" class="archive" *ngIf="!camViewItem.isRecorded">Archive</button>
+                              <button type="button" class="archive" *ngIf="camViewItem.isRecorded">Live</button>
+                              <button class="up"><i class="material-icons">keyboard_arrow_up</i></button>
+                              <button class="down"><i class="material-icons">keyboard_arrow_down</i></button>
+                              <button class="forward" *ngIf="camViewItem.isRecorded"><i class="material-icons">fast_forward</i></button>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+              </mat-tab>
+            </ng-container>
+          </mat-tab-group>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="isExpandable?'row':'row fixedfooter'">
+    <div class="col-md-12 eventTable">
+      <app-monitoring-event [eventsData]="eventsData" (eventExpandableChanged)="eventExpandableChangedHandler($event)">
+      </app-monitoring-event>
+    </div>
+  </div>
+</div>
+<!-- recorded properties modal -->
+<div class="modal" id="recordedPropertiesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notice">
+    <div class="modal-content">
+      <form class="form-horizontal" name="form">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel"><strong>{{ 'camera.recordedFeedProperties' | translate }}</strong></h5>
+
+          <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closeRecordedFeedPropertiesPopUp($event)">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="instruction">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Archive Start Date Time</label>
+              </div>
+              <div class="col-md-8">
+                <input [owlDateTime]="archiveStartDate" [owlDateTimeTrigger]="archiveStartDate" placeholder="{{ 'camera.archiveStartDateTime' | translate }}" [(ngModel)]="selectedCamData.archiveStartDate" name="archiveStartDate">
+                <owl-date-time #archiveStartDate></owl-date-time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button mat-raised-button type="button" class="btn btn-info" (click)="addRecordedFeedProperties($event)">{{ 'camera.submit' | translate }}</button>
+          <button mat-raised-button type="button" class="btn btn-grey" data-dismiss="modal" (click)="closeRecordedFeedPropertiesPopUp($event)">{{ 'camera.cancel' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+.chartist-tooltip {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  min-width: 2em;
+  padding: .5em;
+  background: #F4C63D;
+  color: #453D3F;
+  font-family: Oxygen, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+  .chartist-tooltip::-webkit-scrollbar {
+    width: 0px !important;
+  }
+
+
+  .chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top-color: #F4C63D;
+  }
+
+  .chartist-tooltip.tooltip-show {
+    opacity: 1;
+  }
+
+.ct-area, .ct-line {
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=chartist-plugin-tooltip.css.map */
+
+
+
+
+
+
+.chartheight {
+  height: 500px;
+}
+.chartheightForDashboard {
+  height: 180px;
+}
+
+
+
+
+
+@media screen and (max-width:599px) and (min-width: 320px) {
+  .chartheight {
+    height: auto;
+  }
+}
+
+/*@media screen and (min-width:1600px) {
+
+    .chartheight {
+      height: 300px;
+    }
+  }*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) and (min-width: 768px) {
+  .chartheightForDashboard {
+    height: auto;
+  }
+
+  .chartheight {
+    height: auto;
+  }
+}
+
+@media screen and (max-width:1280px) and (min-width: 1270px) {
+  .chartheight {
+    height: 450px;
+  }
+}
+
+
+@media screen and (min-width:1600px) {
+
+  .chartheightForDashboard {
+    height: 300px;
+  }
+}

@@ -1,0 +1,12 @@
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\bin\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.deps.json
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\bin\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.dll
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\bin\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.pdb
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\bin\Debug\netcoreapp2.2\SampleAppApi.Resources.dll
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\bin\Debug\netcoreapp2.2\SampleAppApi.Resources.pdb
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\bin\Debug\netcoreapp2.2\fr-ca\SampleAppApi.Resources.resources.dll
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\obj\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.csprojAssemblyReference.cache
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\obj\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.AssemblyInfoInputs.cache
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\obj\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.AssemblyInfo.cs
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\obj\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.csproj.CopyComplete
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\obj\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.dll
+C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.BusinessObjects\obj\Debug\netcoreapp2.2\SampleAppApi.BusinessObjects.pdb

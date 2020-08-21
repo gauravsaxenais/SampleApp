@@ -1,0 +1,229 @@
+
+<h4 class="SystemStatus" *ngIf="systemStatus"> <i class="material-icons" style="font-size:25px;">insert_emoticon</i> {{ 'system.systemNotNormal' | translate }} </h4>
+<h4 *ngIf="!systemStatus"> <i class="material-icons" style="font-size:25px;">insert_emoticon</i> {{ 'system.systemNormal' | translate }} </h4>
+
+<div class="NormalStatus">
+
+  <span> {{alarmStatus}}  {{ 'system.alarm' | translate }}  </span>
+  <span>  {{troubleStatus}}  {{ 'system.trouble' | translate }}  </span>
+
+</div>
+
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort class="SystemTable">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="panel">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'system.panelName' | translate }}  </th>
+    <td mat-cell *matCellDef="let element"> {{element.panelName}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'system.status' | translate }}  </th>
+    <td mat-cell *matCellDef="let element">
+      <span [ngClass]="((element.status==mapItemStatus.alarm) || (element.status==mapItemStatus.offline))?'redColor':(element.status==mapItemStatus.trouble)?'brownColor':'greenColor'"><i class="material-icons"> bolt </i> </span> {{mapItemStatus[element.status]}}
+    </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="model">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'system.model' | translate }}  </th>
+    <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="version">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'system.version' | translate }}  </th>
+    <td mat-cell *matCellDef="let element" (click)="onSystemRowClick($event,element)"> {{element.version}} <span class="siteClick"><a data-toggle="modal" data-target="#panelDetailsModal"><i class="material-icons"> keyboard_arrow_right </i> </a> </span> </td>
+  </ng-container>
+
+  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length" class="tdChildPanel">
+      <div *ngIf="element.childPanels.length > 0">
+        <table mat-table [dataSource]="element.childPanels" class="tblChildPanels">
+          <ng-container matColumnDef="panel">
+            <th mat-header-cell *matHeaderCellDef class="hideRow"> {{ 'system.panelName' | translate }} </th>
+            <td class="indentPanelName" mat-cell *matCellDef="let elem"> {{elem.panelName}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef class="hideRow"> {{ 'system.status' | translate }}  </th>
+            <td mat-cell *matCellDef="let elem">
+              <span [ngClass]="((elem.status==mapItemStatus.alarm) || (elem.status==mapItemStatus.offline))?'redColor':(elem.status==mapItemStatus.trouble)?'brownColor':'greenColor'"><i class="material-icons"> bolt </i> </span> {{mapItemStatus[elem.status]}}
+            </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="model">
+            <th mat-header-cell *matHeaderCellDef class="hideRow"> {{ 'system.model' | translate }}  </th>
+            <td mat-cell *matCellDef="let elem"> {{elem.model}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="version">
+            <th mat-header-cell *matHeaderCellDef class="hideRow">  {{ 'system.version' | translate }}  </th>
+            <td mat-cell *matCellDef="let elem" (click)="onSystemRowClick($event, elem)"> {{elem.version}} <span class="siteClick"><a data-toggle="modal" data-target="#panelDetailsModal"><i class="material-icons"> keyboard_arrow_right </i> </a> </span> </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow;"
+      [ngClass]="row.childPanels.length > 0?'':'hideRow'"></tr>
+</table>
+
+
+<div [ngClass]="isExpandable?'row':'row fixedfooter'">
+  <div class="col-md-12">
+    <app-monitoring-event [eventsData]="eventsData" (eventExpandableChanged)="eventExpandableChangedHandler($event)"></app-monitoring-event>
+  </div>
+</div>
+
+<!-- panel properties modal -->
+<div class="modal" id="panelDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notice">
+    <div class="modal-content">
+      <form class="form-horizontal" name="form">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">{{ 'system.panelDetails' | translate }}</h5>
+
+          <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="instruction">
+            <div class="row" *ngIf="errroMessageOnPanelDetailPopUp">
+              <div class="alert alert-danger">
+                {{errroMessageOnPanelDetailPopUp}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.panelName' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelName }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.type' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelType }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.model' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelModel }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.firmware' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelFirmware }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.hardware' | translate }} </label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelHardware }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.rS485Address' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelRSAddress }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.iPAddress' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelIPAddress }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.serialNumber' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelSerialNumber }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.lastChanged' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelLastChanged }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.touchSoftware' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelTouchSoftware }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.touchHardware' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelTouchHardware }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.touchDatabase' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelTouchDatabase }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.touchGUID' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelTouchGUID }}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label>{{ 'system.wANIPAddress' | translate }}</label>
+              </div>
+              <div class="col-8">
+                <label>{{ panelData.panelWANIPAddress }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button mat-raised-button type="button" class="btn btn-info" data-dismiss="modal">{{ 'system.oK' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- panel properties modal -->

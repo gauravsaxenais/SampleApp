@@ -1,0 +1,15 @@
+<div class="col-lg-12" *ngIf="accessPointStatusList" (contextmenu)="onRightClick($event)">
+  <div class="column" *ngFor="let item of accessPointStatusList">
+    <h6 class="text-center">{{item.name}}</h6>
+    <span [matMenuTriggerFor]="menu">
+      <img src="../assets/img/door-icon/close-lock.png" *ngIf="item.statusData1 == 0 && item.statusData2 == 0" />
+      <img src="../assets/img/door-icon/close-unlock.png" *ngIf="item.statusData1 == 0 && item.statusData2 == 1" />
+      <img src="../assets/img/door-icon/open-lock.png" *ngIf="item.statusData1 == 1 && item.statusData2 == 0" />
+      <img src="../assets/img/door-icon/open-unlock.png" *ngIf="item.statusData1 == 1 && item.statusData2 == 1" />
+    </span>
+    <mat-menu #menu="matMenu">
+      <span (click)="onCommandClick($event,item.objectId, cmd, item.mapGuid, item.channelGuid)" *ngFor="let cmd of accessPointCommandsKeys()" (contextmenu)="onRightClick($event)" mat-menu-item> {{("enums.accessPointWebCmd." + cmd) | translate}} </span>
+    </mat-menu>
+    <h6 [className]="item.status == mapItemStatus.alarm ? 'alarmCls text-center' : item.status == mapItemStatus.trouble? 'warningCls text-center' : 'text-center'">{{item.description}}</h6>
+  </div>
+</div>

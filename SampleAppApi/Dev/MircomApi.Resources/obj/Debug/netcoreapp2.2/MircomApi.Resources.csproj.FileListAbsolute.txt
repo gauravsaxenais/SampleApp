@@ -1,0 +1,16 @@
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\bin\Debug\netcoreapp2.2\MircomApi.Resources.deps.json
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\bin\Debug\netcoreapp2.2\MircomApi.Resources.dll
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\bin\Debug\netcoreapp2.2\MircomApi.Resources.pdb
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\bin\Debug\netcoreapp2.2\fr\MircomApi.Resources.resources.dll
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Localization.Abstractions.xml
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.SharedResources.resources
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.SharedResources.fr.resources
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.csproj.GenerateResource.cache
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.csproj.CoreCompileInputs.cache
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.AssemblyInfoInputs.cache
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.AssemblyInfo.cs
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\fr\MircomApi.Resources.resources.dll
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.csproj.CopyComplete
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.dll
+C:\Projects\MIRCOM\MircomApi\Dev\MircomApi.Resources\obj\Debug\netcoreapp2.2\MircomApi.Resources.pdb

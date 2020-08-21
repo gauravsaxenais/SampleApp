@@ -1,0 +1,213 @@
+.material-icons {
+  cursor: pointer;
+}
+.table-box {
+  border-collapse: separate;
+  /*border: 1px solid #b7c7cf;*/
+  text-align: center;
+  border-spacing: 0px 1px;
+}
+
+  .table-box thead > tr > th {
+    background-color: #015697;
+    color: white;
+    border-bottom: 1px solid #d8e6ec;
+  }
+
+  .table-box tbody > tr {
+    background-color: #e4e4e4;
+  }
+
+  .table-box tr th {
+    height: 40px;
+    padding-left: 15px !important;
+  }
+
+  .table-box tr td {
+    height: 30px;
+    padding-left: 15px !important;
+    font-size: 16px;
+    font-weight:400;
+  }
+button.upward-button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+button.downward-button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.table-container {
+  width:100%;
+  padding-right: 0px;
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+  /*max-height: 250px;
+  overflow: scroll;*/
+}
+
+/*.table-head::-webkit-scrollbar {
+  width: 0px !important;
+}*/
+
+  /*.table-container::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 50px;
+    padding-top: 50px;
+  }*/
+
+
+.table-box {
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+  box-shadow:4px 2px 3px 2px #333;
+}
+
+.table-box:last-child {border-spacing: 0px;}
+.clsPointerCursor {
+  cursor: pointer !important;
+}
+
+.alarmCls {
+  color: red;
+}
+
+  .alarmCls:hover {
+    color: red;
+  }
+
+.warningCls {
+  color: brown !important;
+}
+
+  .warningCls:hover {
+    color: brown !important;
+
+  }
+
+.normalCls {
+  color: black !important;
+}
+
+  .normalCls:hover {
+    color: black !important;
+    opacity: 0.8;
+  }
+
+ 
+.table > thead > tr > th {
+  border-bottom-width: 1px;
+  font-size: 16px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.table-head {
+  overflow-y: auto;
+  height: 190px;
+  z-index: 999;
+  background: #e4e4e4;
+}
+ .table-head th {
+    position: sticky;
+    top: 0;
+  }
+
+.table-head-expand {
+  overflow-y: auto;
+  height: 85vh;
+  z-index: 999;
+  background: #e4e4e4;
+}
+  .table-head-expand th {
+    position: sticky;
+    top: 0;
+  }
+
+
+/* Just common table stuff. Really. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px 16px;
+}
+
+th {
+  text-align: left;
+}
+
+
+
+
+
+/* Responsive css start here */
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .table-container {
+    width: 100%;
+    /*position: static;*/
+    bottom: 0;
+    padding-right: 0px;
+  }
+
+  .disableRowMedia {
+    display: none !important;
+  }
+  .table-box tr td {
+    padding-left: 15px !important;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .table > thead > tr > th {
+    font-size:12px;font-weight:400;
+  }
+  .table-head {
+    height:130px;
+  }
+.table-head::-webkit-scrollbar {
+  width: 0px !important;
+}
+  }
+
+
+
+@media screen and (max-width: 1024px) and (min-width:768px) {
+  .table-container {
+    width: 100% !important;
+    /*position: static !important;*/
+    bottom: 0;
+    padding-right: 0px !important;
+  }
+  .table-box tr td {
+    padding-left: 15px !important;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .table > thead > tr > th {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .table-head::-webkit-scrollbar {
+    width: 0px !important;
+  }
+}
+
+
+@media screen and (max-width:1360px) and (min-width:1280px) {
+  .table-container{
+    width: 100%;
+    /*position: static;*/
+    bottom: 0;
+    padding-right: 0px;
+  }
+
+
+
+}

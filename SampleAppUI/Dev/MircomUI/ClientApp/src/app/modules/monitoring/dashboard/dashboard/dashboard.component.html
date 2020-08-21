@@ -1,0 +1,304 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="section-heading">
+      <h5> <span> <i class="material-icons"> dashboard </i> </span>{{ 'dashboard.dashboard' | translate }} </h5>
+    </div>
+  </div>
+
+  <div class="headerMenuIcons">
+    <a title="{{ 'dashboard.addWidget' | translate }}" (click)="addItem()" *ngIf="editable"><i class="material-icons icon-white">add</i></a>&nbsp;
+    <a title="{{ 'dashboard.edit' | translate }}" (click)="editable = !editable" *ngIf="!editable"><i class="material-icons icon-white">edit</i></a>
+    <a title="{{ 'dashboard.done' | translate }}" (click)="editable = !editable" *ngIf="editable"> <i class="material-icons icon-white">done</i></a>
+  </div>
+
+
+  <!--<div [ngClass]="editable?'dashboard-page dashboardFullSize':'dashboard-page dashboardFullSize space-bottom'">-->
+  <div class="dashboard-page dashboardFullSize">
+    <div *ngIf="editable" class="col-lg-3 leftPanel">
+      <h4 class="editHeader" style="text-align: left;padding-right: 65px;font-weight:bold"> {{ 'dashboard.widgets' | translate }} </h4>
+      <div class="sidebar1-wrapper">
+        <ul class="nav" style="
+          padding-right: 65px;" cdkDropList #dashboardList="cdkDropList" [cdkDropListData]="sideWidgets"
+            [cdkDropListConnectedTo]="[dashboardDragList]">
+          <li class="nav-item"
+              id="$index"
+              *ngFor="let menu of getSideWidgets();let $index = index;"
+              cdkDrag>
+
+            <a class="nav-link collapsed" [ngClass]="menu===''?'displayNone':''"
+               (mouseover)="toggleHighlight(true)"
+               (mouseleave)="toggleHighlight(false)"
+               (click)="data($event, menu)"
+               style="cursor: move;"
+               (cdkDropListDropped)="drop($event)"
+               data-toggle="collapse"
+               aria-expanded="false">
+
+              <p (click)="select(menu)" [ngClass]="menu === isActive() ? 'activatedItem' : ''">
+                {{("enums.widgetType." + menu) | translate}}<b class="caret"></b>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="gridsterDiv">
+      <gridster [options]="editable?options:viewOptions" [ngClass]="editable?'gridster':'viewGridster'"
+                cdkDropList #grid #dashboardDragList="cdkDropList"
+                [cdkDropListData]="widgets" (cdkDropListDropped)="drop($event)">
+        <gridster-item [item]="widget" *ngFor="let widget of widgets">
+          <div *ngIf="widget.type==sideWidgetList.Map" class="dropdown"
+               style="height:100%;width:100%; display:flex;" (mouseleave)="widget.isClick=false">
+
+            <div class="my-widgets" style="height:100%;width:100%;" [ngStyle]="{'background-color':transparent}">
+
+              <div class="col-md-12">
+                <div class="card card-chart card1" id="divMap">
+                  <div class="card-header card-header-icon card-header-danger" data-header-animation="true">
+                    <div class="card-text card1-color" (click)="onActionClick(widget)">
+                      <h4 class="card-title"> {{("enums.widgetType." + getSideWidgets()[sideWidgetList.Map]) | translate}} </h4>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-actions editDropdown-content feedField" *ngIf="editable">
+                      <button mat-raised-button type="button" (click)="askDeleteWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.delete' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="askEditWidget($index,widget)" data-toggle="modal" data-target="#mapModal" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.edit' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">edit</i>
+                      </button>
+                    </div>
+                    <div class="card-actions feedField" *ngIf="!editable">
+                      <button mat-raised-button type="button" (click)="refreshWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.refresh' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">refresh</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="jumpToComponent($index,widget)" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.jump' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">fullscreen</i>
+                      </button>
+                    </div>
+                    <div *ngIf="widget.buildingId === 0" style="margin-top: -16px;">
+                      <app-monitoring-site-map [numberOfSiteMap]="widget.randomNumber"></app-monitoring-site-map>
+                    </div>
+                    <div *ngIf="widget.buildingId !== 0" style="margin-top: -16px;">
+                      <app-monitoring-floor-map [componentGuid]="widget.componentGuid" [mapId]="widget.mapId" [isRefreshMap]="widget.isRefresh" [numberOfFloorMap]="widget.randomNumber" [editableDashboard]="editable"></app-monitoring-floor-map>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="widget.type==sideWidgetList.Chart" class="dropdown" style="height:100%;width:100%; display:flex;" (mouseleave)="widget.isClick=false">
+            <div class="my-widgets" style="height:100%;width:100%;" [ngStyle]="{'background-color':transparent}">
+              <div class="col-md-12">
+                <div class="card card-chart card2">
+                  <div class="card-header card-header-icon card-header-danger" data-header-animation="true">
+                    <div class="card-text card1-color" (click)="onActionClick(widget)">
+                      <h4 class="card-title"> {{chartCaption}} </h4>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-actions editDropdown-content feedField" *ngIf="editable">
+                      <button mat-raised-button type="button" (click)="askDeleteWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.delete' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="askEditWidget($index,widget)" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.edit' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">edit</i>
+                      </button>
+                    </div>
+                    <div class="card-actions feedField" *ngIf="!editable">
+                      <button mat-raised-button type="button" (click)="refreshWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.refresh' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">refresh</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="jumpToComponent($index,widget)" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.jump' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">fullscreen</i>
+                      </button>
+                    </div>
+                    <app-monitoring-access-granted-chart [numberOfCharts]="widget.randomNumber" [isDashboard]="isDashboard" (outputChartCaption)="eventChartCaptionBindHandler($event)">
+                    </app-monitoring-access-granted-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="widget.type==sideWidgetList.AccessPoint" class="dropdown"
+               style="height:100%;width:100%; display:flex;" (mouseleave)="widget.isClick=false">
+            <div class="my-widgets" style="height:100%;width:100%;" [ngStyle]="{'background-color':transparent}">
+              <div class="col-md-12">
+                <div class="card card-chart card2">
+                  <div class="card-header card-header-icon card-header-danger" data-header-animation="true">
+                    <div class="card-text card1-color" (click)="onActionClick(widget)">
+                      <h4 class="card-title"> {{("enums.widgetType." + getSideWidgets()[sideWidgetList.AccessPoint]) | translate}} </h4>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-actions editDropdown-content feedField" *ngIf="editable">
+                      <button mat-raised-button type="button" (click)="askDeleteWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.delete' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="askEditWidget($index,widget)" [class.disabled]="true" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.edit' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">edit</i>
+                      </button>
+                    </div>
+                    <div class="card-actions feedField" *ngIf="!editable">
+                      <button mat-raised-button type="button" (click)="refreshWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.refresh' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">refresh</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="jumpToComponent($index,widget)" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.jump' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">fullscreen</i>
+                      </button>
+                    </div>
+                    <app-monitoring-access-point></app-monitoring-access-point>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="widget.type==sideWidgetList.System" class="dropdown"
+               style="height:100%;width:100%; display:flex;" (mouseleave)="widget.isClick=false">
+            <div class="my-widgets" style="height:100%;width:100%;" [ngStyle]="{'background-color':transparent}">
+              <div class="col-md-12">
+                <div class="card card-chart card1">
+                  <div class="card-header card-header-icon card-header-danger" data-header-animation="true">
+                    <div class="card-text card1-color" (click)="onActionClick(widget)">
+                      <h4 class="card-title"> {{("enums.widgetType." + getSideWidgets()[sideWidgetList.System]) | translate}} </h4>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-actions editDropdown-content feedField" *ngIf="editable">
+                      <button mat-raised-button type="button" (click)="askDeleteWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.delete' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="askEditWidget($index,widget)" [class.disabled]="true" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.edit' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">edit</i>
+                      </button>
+                    </div>
+                    <div class="card-actions feedField" *ngIf="!editable">
+                      <button mat-raised-button type="button" (click)="refreshWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.refresh' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">refresh</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="jumpToComponent($index,widget)" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.jump' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">fullscreen</i>
+                      </button>
+                    </div>
+                    <app-monitoring-system></app-monitoring-system>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="widget.type==sideWidgetList.Camera" class="dropdown"
+               style="height:100%;width:100%; display:flex;" (mouseleave)="widget.isClick=false">
+            <div class="my-widgets" style="height:100%;width:100%;" [ngStyle]="{'background-color':transparent}">
+              <div class="col-md-12">
+                <div class="card card-chart card1">
+                  <div class="card-header card-header-icon card-header-danger" data-header-animation="true">
+                    <div class="card-text card1-color" (click)="onActionClick(widget)">
+                      <h4 class="card-title"> {{("enums.widgetType." + getSideWidgets()[sideWidgetList.Camera]) | translate}} </h4>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-actions editDropdown-content feedField" *ngIf="editable">
+                      <button mat-raised-button type="button" (click)="askDeleteWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.delete' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="askEditWidget($index,widget)" data-toggle="modal" data-target="#cameraModal" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.edit' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">edit</i>
+                      </button>
+                    </div>
+                    <div class="card-actions feedField" *ngIf="!editable">
+                      <button mat-raised-button type="button" (click)="refreshWidget($index,widget)" class="btn btn-info btn-link" matTooltip="{{ 'dashboard.refresh' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">refresh</i>
+                      </button>
+                      <button mat-raised-button type="button" (click)="jumpToComponent($index,widget)" class="btn btn-default btn-link" matTooltip="{{ 'dashboard.jump' | translate }}" [matTooltipPosition]="'below'">
+                        <i class="material-icons">fullscreen</i>
+                      </button>
+                    </div>
+                    <app-camera-popup *ngIf="widget.componentGuid" [componentGuid]="widget.componentGuid" [previousComponentGuid]="widget.previousComponentGuid" [isRefreshCamera]="widget.isRefresh"></app-camera-popup>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </gridster-item>
+      </gridster>
+
+    </div>
+  </div>
+</div>
+
+  <div *ngIf="!editable" class="row fixedfooter">
+    <div class="col-md-12 eventTable">
+      <app-monitoring-event [eventsData]="eventsData" (eventExpandableChanged)="eventExpandableChangedHandler($event)">
+      </app-monitoring-event>
+    </div>
+  </div>
+
+
+<!-- map properties modal -->
+<div class="modal" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notice">
+    <div class="modal-content">
+      <form class="form-horizontal" name="form">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel"><strong>{{ 'dashboard.selectMap' | translate }}</strong></h5>
+
+          <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closeEditMapPopUp($event)">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="instruction">
+            <div class="form-check">
+              <mat-form-field>
+                <mat-select placeholder="{{ 'dashboard.selectMap' | translate }}" [(ngModel)]="selectedMapId" name="selectedMapId" (selectionChange)="onMapChange($event.value)">
+                  <mat-option *ngFor="let site of allSiteMapsData" [value]="site.mapGuid">
+                    {{site.title}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button mat-raised-button type="button" class="btn btn-info" (click)='onEditMapSelectionSubmitted($event)'>{{ 'dashboard.submit' | translate }}</button>
+          <button mat-raised-button type="button" class="btn btn-grey" data-dismiss="modal" (click)="closeEditMapPopUp($event)">{{ 'dashboard.cancel' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- map properties modal -->
+<!-- camera properties modal -->
+<div class="modal" id="cameraModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notice">
+    <div class="modal-content">
+      <form class="form-horizontal" name="form">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel"><strong>{{ 'dashboard.selectCamera' | translate }}</strong></h5>
+
+          <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closeEditMapPopUp($event)">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="instruction">
+            <div class="form-check">
+              <mat-form-field>
+                <mat-select placeholder="{{ 'dashboard.selectCamera' | translate }}" [(ngModel)]="selectedCameraGuid" name="selectedCameraGuid" (selectionChange)="onCameraChange($event.value)">
+                  <mat-option *ngFor="let camera of cameraDproData" [value]="camera.value">
+                    {{camera.key}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button mat-raised-button type="button" class="btn btn-info" (click)='onEditCameraSelectionSubmitted($event)'>{{ 'dashboard.submit' | translate }}</button>
+          <button mat-raised-button type="button" class="btn btn-grey" data-dismiss="modal" (click)="closeEditMapPopUp($event)">{{ 'dashboard.cancel' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- camera properties modal -->

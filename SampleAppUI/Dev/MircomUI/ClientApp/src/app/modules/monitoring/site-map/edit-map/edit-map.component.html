@@ -1,0 +1,249 @@
+  <div class="row">
+    <div class="overlay" *ngIf="isLoader()"><div class="overlay-content"><span class="loader" *ngIf="isLoader()"></span></div></div>
+    <div class="headerMenuIcons" *ngIf="!isLoader()">
+      <a mat-raised-button class="btn btn-raised btn-info" data-toggle="modal" data-target="#siteMapImageUpload" (click)="onOpenUpload($event)" title="{{'editMap.uploadimage'  | translate}}"> <i class="material-icons icon-white">exit_to_app</i></a>
+      <a mat-raised-button class="btn btn-raised btn-info" title="{{'editMap.remove'  | translate }}" (click)="onRemoveBuildingClick($event)" [disabled]="siteMapData && siteMapData.mapItem && siteMapData.mapItem.length<=0"> <i class="material-icons icon-white">remove</i></a>
+      <a mat-raised-button class="btn btn-raised btn-info" title="{{'editMap.done'  | translate }}" (click)='onSaveMapDetail($event)'> <i class="material-icons icon-white">done</i></a>
+    </div>
+    <div class="col-sm-12"><h3 *ngIf="title" style="text-align:center;"><strong>{{ 'editMap.editMap' | translate }}</strong></h3></div>
+    <div style="padding-left: 30px;">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="editHeader"> {{ 'editMap.componentLibrary' | translate }} </h4> <br />
+        </div>
+        <div class="col-sm-12">
+          <div class="sidebar1-wrapper">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#inputsTag" aria-expanded="false">
+                  <p>
+                    {{ 'editMap.inputs' | translate }} <b class="caret"></b>
+                  </p>
+                </a>
+                <div class="collapse" id="inputsTag" style="">
+                  <ul class="nav">
+                    <li class="nav-item" *ngFor="let item of inputData">
+                      <div draggable="true" (dragstart)="drag($event,item)" cdkDropList>
+                        <a *ngIf="!item.isUsed" class="nav-link" style="cursor:move; "
+                           width="88"
+                           height="31">
+                          <span class="sidebar-normal">
+                            <i class="material-icons"> exit_to_app </i>
+                            {{item.name}}
+                            <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done">
+                              <i class="material-icons">done</i>
+                            </a>
+                          </span>
+                        </a>
+                      </div>
+                      <a *ngIf="item.isUsed" class="nav-link" style="cursor:move;"
+                         width="88"
+                         height="31">
+                        <span class="sidebar-normal">
+                          <i class="material-icons"> exit_to_app </i>
+                          {{item.name}}
+                          <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done">
+                            <i class="material-icons">done</i>
+                          </a>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#accessPointTag" aria-expanded="false">
+                  <p>
+                    {{ 'editMap.accessPoints' | translate }}<b class="caret"></b>
+                  </p>
+                </a>
+                <div class="collapse" id="accessPointTag" style="">
+                  <ul class="nav">
+                    <li class="nav-item" *ngFor="let item of accessPointData">
+                      <div draggable="true" (dragstart)="drag($event,item)" cdkDropList>
+                        <a *ngIf="!item.isUsed" class="nav-link" style="cursor:move;"
+                           width="88"
+                           height="31">
+                          <span class="sidebar-normal">
+                            <i class="material-icons"> exit_to_app </i>
+                            {{item.name}}
+                            <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done"> <i class="material-icons">done</i></a>
+                          </span>
+                        </a>
+                      </div>
+                      <a *ngIf="item.isUsed" class="nav-link" style="cursor:move;"
+                         width="88"
+                         height="31">
+                        <span class="sidebar-normal">
+                          <i class="material-icons"> exit_to_app </i>
+                          {{item.name}}
+                          <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done"> <i class="material-icons">done</i></a>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#camerasTag" aria-expanded="false">
+                  <p>
+                    {{ 'editMap.cameras' | translate }}<b class="caret"></b>
+                  </p>
+                </a>
+                <div class="collapse" id="camerasTag" style="">
+                  <ul class="nav">
+                    <li class="nav-item" *ngFor="let item of cameraData"
+                        cdkDropList>
+                      <div draggable="true" (dragstart)="drag($event,item)" cdkDropList>
+                        <a *ngIf="!item.isUsed" class="nav-link" style="cursor:move;"
+                           width="88"
+                           height="31">
+                          <span class="sidebar-normal">
+                            <i class="material-icons"> exit_to_app </i>
+                            {{item.name}}
+                            <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done"> <i class="material-icons">done</i></a>
+                          </span>
+                        </a>
+                      </div>
+                      <a *ngIf="item.isUsed" class="nav-link" style="cursor:move;"
+                         width="88"
+                         height="31">
+                        <span class="sidebar-normal">
+                          <i class="material-icons"> exit_to_app </i>
+                          {{item.name}}
+                          <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done"> <i class="material-icons">done</i></a>
+                        </span>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#buildingTag" aria-expanded="false">
+                  <p>
+                    {{ 'editMap.buildings' | translate }}<b class="caret"></b>
+                  </p>
+                </a>
+                <div id="buildingTag" class="collapse">
+                  <ul class="nav">
+                    <li class="nav-item" *ngFor="let item of buildingData">
+                      <div draggable="true" (dragstart)="drag($event,item)" cdkDropList>
+                        <a *ngIf="!item.isUsed" class="nav-link" style="cursor:move;" width="88" height="31">
+                          <span class="sidebar-normal">
+                            <i class="material-icons"> exit_to_app </i>
+                            {{item.name}}
+                            <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done"> <i class="material-icons">done</i></a>
+                          </span>
+                        </a>
+                      </div>
+                      <a *ngIf="item.isUsed" class="nav-link" style="cursor:move;"
+                         width="88"
+                         height="31">
+                        <span class="sidebar-normal">
+                          <i class="material-icons"> exit_to_app </i>
+                          {{item.name}}
+                          <a *ngIf="item.isUsed" (click)="redirectToPage(item.mapGuid)" class="pull-right" title="done"> <i class="material-icons">done</i></a>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:left;padding-left:50px;">
+      <div class="container">
+        <div class="row" *ngIf="siteMapData">
+          <div class="col-sm-12" style="margin-left:-7px;text-align:left;font-weight:bold;">
+            {{ 'editMap.title' | translate }} &nbsp;:&nbsp;&nbsp;
+            <input type="text" [(ngModel)]="siteMapData.title" (change)="modelChanged($event)" placeholder="{{ 'editMap.title' | translate }}" maxlength="200" size="50">
+          </div>
+          <div class="col-lg-12">
+            &nbsp;
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="setSiteHeight" id="divSource" [ngStyle]="{'background': 'url(../assets/img/blank-sitemap.png)'}" (drop)="drop($event)"
+                     [style.top.px]='marginY'
+                     [style.left.px]='marginX'
+                     [style.width.px]='widthBlank'
+                     [style.height.px]='heightBlank'>
+                  <!--[ngStyle]="{'background': 'url(' + siteMapData.image + ')'}"-->
+                  <div *ngIf="siteMapData.image" id='site'
+                       [style.top.px]='y'
+                       [style.left.px]='x'
+                       [style.width.px]='width'
+                       [style.height.px]='height'
+                       (mousedown)='onWindowPress($event)'
+                       (mousemove)='onWindowDrag($event)' [ngStyle]="{'background': 'url(' + siteMapData.orginalImage + ')'}">
+                    <!--<div #imgsite id="imgSitemap" style="height:100%;width:100%;position:relative;background-repeat:round;"></div>-->
+                    <!--<img [src]="this.siteMapData.orginalImage"style="height:100%;width:100%;" />-->
+                    <div (mousedown)='onCornerClick($event, topLeftResize)' id='site-top-left-resize' class='site-corner-resize'></div>
+                    <div (mousedown)='onCornerClick($event, topRightResize)' id='site-top-right-resize' class='site-corner-resize'></div>
+                    <div (mousedown)='onCornerClick($event, bottomLeftResize)' id='site-bottom-left-resize' class='site-corner-resize'></div>
+                    <div (mousedown)='onCornerClick($event, bottomRightResize)' id='site-bottom-right-resize' class='site-corner-resize'></div>
+                  </div>
+                  <div *ngFor="let item of siteMapData.mapItem" [ngClass]="item.UniqueId==selectedDeleteGuid?'box-selected':'box-map'" cdkDragBoundary="#divSource" cdkDrag (cdkDragEnded)="onDragEnded($event,item.type,item.itemGuid,item.itemId,item.panelGuid)"
+                       (click)="selectedDeleteBuilding($event,item.UniqueId,item.type)" [style.top.px]="item.y"
+                       [style.left.px]="item.x">
+                    <i title="{{item.name}}" class="material-icons home-icon" *ngIf="item.type===mapItemType[mapItemType.Building]">home</i>
+                    <img title="{{item.name}}" class="doorIcons" src="../assets/img/edit-icons/door.png" *ngIf="item.type===mapItemType[mapItemType.AccessPoint]" />
+                    <img title="{{item.name}}" class="doorIcons" src="../assets/img/edit-icons/Input.png" *ngIf="item.type===mapItemType[mapItemType.Input]" />
+                    <img title="{{item.name}}" class="doorIcons" src="../assets/img/edit-icons/Camera.png" *ngIf="item.type===mapItemType[mapItemType.Camera]" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="siteMapImageUpload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notice">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">{{ 'editMap.updateImage' | translate }}</h5>
+
+            <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="instruction">
+
+              <div class="row" *ngIf="siteMapData">
+                <div class="col-md-12" *ngIf="errorMessageFileExtension">
+                  <div class="alert alert-danger">
+                    {{errorMessageFileExtension}}
+                  </div>
+                </div>
+
+                <div class="col-md-8">
+                  <img [src]="backGroundImage" width="100%" *ngIf="backGroundImage"> <br />
+                  <label for="floorFileId" class="btn">{{ 'editBuilding.selectImage' | translate }}</label>
+                  <input type='file' id="floorFileId" #floorFileId (change)="onSelectFloorFile($event)" style="display:none;" [src]="backGroundImage" />
+                  <button mat-raised-button type="button" class="btn btn-grey" data-dismiss="modal" (click)="useBlankImage();">{{ 'editMap.removeImage' | translate }}</button>
+                </div>
+              </div>
+
+              <div class="modal-footer justify-content-center">
+                <button mat-raised-button type="button" class="btn btn-info" (click)='onUploadSubmitted($event)'>{{ 'editMap.submit' | translate }}</button>
+                <button mat-raised-button type="button" class="btn btn-grey" data-dismiss="modal">{{ 'editMap.cancel' | translate }}</button>
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>

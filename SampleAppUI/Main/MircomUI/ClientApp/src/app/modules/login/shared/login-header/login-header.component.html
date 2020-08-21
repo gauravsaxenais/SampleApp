@@ -1,0 +1,26 @@
+  <div class="nav-outer-div">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <div mat-icon-button aria-label="Example icon-button with a menu"
+           style="width:100%;padding:0px 20px">
+        <mat-icon [matMenuTriggerFor]="menu" class="hamburger_menu">view_headline</mat-icon>
+       
+        <div class="navbar-wrapper">
+          <a class="navbar-brand logo" > <img src="assets/img/logo.png" alt="Mircom" /> </a>
+        </div>
+        <mat-icon class="language_icon" (click)="openModal()">language</mat-icon>
+      </div>
+
+
+      <div class="menu_popup">
+        <mat-menu #menu="matMenu">
+          <a mat-menu-item [routerLink]="['/']">{{ 'loginHeader.logIn' | translate }}</a>
+          <a mat-menu-item [routerLink]="['/']" (click)="openModal()">{{ 'loginHeader.language' | translate }}</a>
+          <a mat-menu-item [routerLink]="['/help']">{{ 'loginHeader.help' | translate }}</a>
+        </mat-menu>
+      </div>
+     
+    </nav>
+</div>
+
+
+

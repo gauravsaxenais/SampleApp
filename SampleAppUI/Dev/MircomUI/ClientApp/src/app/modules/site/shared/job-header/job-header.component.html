@@ -1,0 +1,4 @@
+<a class="mat-menu-item" [routerLink]="['/site']">{{ 'jobHeader.sites' | translate }}</a>
+<a mat-menu-item (contextmenu)="onRightClick($event)" (click)="openModal()">Language</a>
+<a class="mat-menu-item" [routerLink]="['/site/help']">{{ 'jobHeader.help' | translate }}</a>
+<a class="mat-menu-item" (click)="logout()">{{ 'jobHeader.logout' | translate }}  </a>

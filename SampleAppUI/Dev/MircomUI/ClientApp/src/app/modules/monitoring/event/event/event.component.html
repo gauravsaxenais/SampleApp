@@ -1,0 +1,58 @@
+  <span class="loader" *ngIf="isLoading" ></span>
+  <div class="section-heading"> <h5> <span> <i class="material-icons"> date_range  </i></span>{{ 'event.event' | translate }} </h5></div>
+  <div class="left-side-container">
+
+    <div class="card">
+      <!--<div class="card-header card-header-primary card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">event</i>
+        </div>
+        <h4 class="card-title">Events</h4>
+      </div>-->
+      <div class="card-body">
+        <div class="toolbar">
+          <!--        Here you can write extra buttons/actions for the toolbar              -->
+          <div class="row">
+            <div class="EventField">
+              <select class="EventText" id="drpEventType" name="eventType" (ngModelChange)="onEventTypeChange($event)" [(ngModel)]='eventTypeModel'>
+                <option *ngFor="let eventType of eventTypes" [ngValue]="eventType">
+                  {{("enums.eventType." + eventType) | translate}}
+                </option>
+              </select>
+            </div>
+
+            <div class="EventField">
+              <div id="eventDescriptionDiv">
+                <input type="text" placeholder="{{ 'event.description' | translate }}" id="txtDescSearch" class="EventText" />
+              </div>
+            </div>
+            <div class="EventField">
+              <div id="siteChangeDiv">
+                <select id="drpSiteSearch" class="EventText"> <option value="" selected>{{ 'event.allSites' | translate }}</option> </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="material-datatables" *ngIf="eventsData">
+          <div class="table-responsive">
+            <table id="datatables" class="table table-box table-hover text-left" cellspacing="0" width="100%" style="width:100%">
+              <thead>
+                <tr>
+                  <th>{{ 'event.time' | translate }}</th>
+                  <th>{{ 'event.eventDescription' | translate }}</th>
+                  <th>{{ 'event.panel' | translate }}</th>
+                  <th class="disableRowMedia">{{ 'event.site' | translate }}</th>
+                  <th class="ui-state-default">{{ 'event.action' | translate }}</th>
+                  <th hidden="hidden">{{ 'event.severity' | translate }}</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- end content-->
+    </div>
+  </div>
+  <!--  end card  -->
+

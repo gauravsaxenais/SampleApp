@@ -1,0 +1,242 @@
+{
+  "login": {
+    "title": "S'identifier",
+    "username": "Nom d'utilisateur...",
+    "password": "Mot de passe...",
+    "OrLogin": "Or Login"
+  },
+  "site": {
+    "name": "Des noms",
+    "description": "La description",
+    "deleteTitle": "Êtes-vous sûr de vouloir supprimer ce site?",
+    "deleteText": "You would not be able to revert this!",
+    "deleteButtonOkText": "Yes, delete it!",
+    "extensionAllowedForImport": "Only t3 file extension is supported for import file.",
+    "title": "Site"
+  },
+  "common": {
+    "nameRequired": "Name is required.",
+    "errorMessage": "Something went wrong."
+  },
+  "loginHeader": {
+    "logIn": "Log In",
+    "language": "Language",
+    "languages": "Languages",
+    "pleaseSelectALanguage": "Please select a language",
+    "cancel": "Cancel",
+    "oK": "Ok",
+    "help": "Help"
+
+  },
+  "jobHeader": {
+    "sites": "Sites",
+    "language": "Language",
+    "help": "Help",
+    "logout": "Logout",
+    "languages": "Languages",
+    "pleaseSelectALanguage": "Please select a language",
+    "cancel": "Cancel",
+    "oK": "Ok"
+  },
+  "siteEdit": {
+    "siteName": "Site Name",
+    "createFrom": "Create From",
+    "templateList": "Template List",
+    "copyFrom": "Copy From",
+    "description": "Description",
+    "address": "Address",
+    "city": "City",
+    "stateProvince": "State/Province",
+    "country": "Country",
+    "zipPostalCode": "Zip/Postal Code",
+    "createdBy": "Created By",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "siteImportedSuccessfully": "site imported successfully",
+    "siteNameExists": "This site name already exists."
+  },
+  "accessPoint": {
+    "accessPoints": "Access Points"
+  },
+  "chart": {
+    "chart": "Chart"
+  },
+  "dashboard": {
+    "dashboard": "Dashboard",
+    "widgets": "WIDGETS",
+    "areYouSureYouWantToDeleteTheItem": "Are you sure you want to delete the item?",
+    "youWouldNotBeAbleToRevertThis": "You would not be able to revert this!",
+    "warning": "warning",
+    "yesDeleteIt": "Yes, delete it!"
+  },
+  "event": {
+    "event": "Event",
+    "allSites": "All sites",
+    "time": "Time",
+    "eventDescription": "Event Description",
+    "panel": "Panel",
+    "site": "Site",
+    "action": "Action",
+    "severity": "Severity"
+  },
+  "chartOption": {
+    "chartOptions": "Chart Options",
+    "pleaseProvideTitle": "Please provide title",
+    "pleaseSelectInterval": "Please select interval",
+    "cancel": "Cancel",
+    "save": "Save",
+    "pleaseSelectChartType": "Please select chart type.",
+    "startEndDatesRequired": "Start date and end date are required.",
+    "endDateNotGreater": "End date should not be greater than current date.",
+    "endDateShouldBeGreater": "End date should be greater than start date.",
+    "startDateNotLess": "Start date should not be less than one month."
+  },
+  "monitoringEvent": {
+    "time": "Time",
+    "eventDescription": "Event Description",
+    "panel": "Panel",
+    "site": "Site"
+  },
+  "monitoringHeader": {
+    "sites": "Sites",
+    "maps": "Maps",
+    "language": "Language",
+    "help": "Help",
+    "logout": "Logout",
+    "languages": "Languages",
+    "pleaseSelectALanguage": "Please select a language",
+    "cancel": "Cancel",
+    "oK": "Ok"
+  },
+  "monitoringLeftPanel": {
+    "dashboard": "Dashboard",
+    "accessPoints": "Access Points",
+    "camera": "Camera",
+    "chart": "Chart",
+    "event": "Event",
+    "maps": "Maps",
+    "system": "System"
+  },
+  "monitoringSystem": {
+    "alarm": "Alarm",
+    "trouble": "Trouble",
+    "systemNotNormal": "System Not Normal",
+    "systemNormal": "System Normal"
+  },
+  "building": {
+    "buildingViewMap": "Building View Map"
+  },
+  "editBuilding": {
+    "addEditBuilding": "Add/Edit Building",
+    "name": "Name",
+    "description": "Description",
+    "numberOfFloors": "Number of floors",
+    "buildingNumber": "Building Number",
+    "floorStackFile": "Floor stack File",
+    "floorStackPicture": "Floor stack Picture",
+    "showcasePicture": "Showcase Picture",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "updateSiteMap": "Update Site Map",
+    "showcaseImages": "Only jpg, png ang gif images are supported for showcase file.",
+    "floorstackImages": "Only jpg, png ang gif images are supported for floorstack file.",
+    "areyousureyouwanttodeletethisbuilding": "Are you sure you want to delete this building?",
+    "youwouldnotbeabletorevertthis": "You would not be able to revert this!",
+    "yesDeleteIt": "Yes, delete it!",
+    "ok": "OK!",
+    "sitedeletionisnotallowed": "Site deletion is not allowed.",
+    "pleaseselectthebuildingyouwanttoremove": "Please select the building you want to remove."
+  },
+  "editMap": {
+    "editMap": "Edit Map",
+    "componentLibrary": "COMPONENT LIBRARY",
+    "inputs": "Inputs",
+    "accessPoints": "Access Points",
+    "cameras": "Cameras",
+    "buildings": "Buildings",
+    "title": "Title",
+    "updateImage": "Update Image",
+    "removeImage": "Remove Image",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "areYouSureYouWantToDeleteTheItem": "Are you sure you want to delete the item?",
+    "youWouldNotBeAbleToRevertThis": "You would not be able to revert this!",
+    "warning": "warning",
+    "yesDeleteIt": "Yes, delete it!"
+  },
+  "floor": {
+    "floorMapView": "Floor Map View"
+  },
+  "siteMap": {
+    "siteMap": "Site Map"
+  },
+  "siteShowCase": {
+    "maps": "Maps"
+  },
+  "system": {
+    "systemNotNormal": "System Not Normal",
+    "systemNormal": "System Normal",
+    "alarm": "Alarm",
+    "trouble": "Trouble",
+    "panelName": "Panel Name",
+    "status": "Status",
+    "model": "Model",
+    "version": "Version",
+    "panelDetails": "Panel Details",
+    "type": "Type",
+    "firmware": "Firmware",
+    "hardware": "Hardware",
+    "rS485Address": "RS485 address",
+    "iPAddress": "IP address",
+    "serialNumber": "Serial number",
+    "lastChanged": "Last changed",
+    "touchSoftware": "Touch software",
+    "touchHardware": "Touch hardware",
+    "touchDatabase": "Touch database",
+    "touchGUID": "Touch GUID",
+    "wANIPAddress": "WAN IP Address",
+    "oK": "OK"
+  },
+  "siteMapView": {
+    "searchError": "Sorry, this search produced no results.",
+    "noDataMessage": "No data exist for this site."
+  },
+  "help": {
+    "header": "OUR HISTORY – FOUNDED IN 1991 BY MR. TONY FALBO",
+    "content1": "We trace our beginnings back to the early 1960’s, when our founder, Mr. Tony Falbo, started out manufacturing apartment intercom and related systems in Toronto. His company, known as Mirtone, quickly expanded to include fire alarm systems, and grew to become the 2nd largest fire alarm manufacturer in Canada, before being purchased by Edwards. However, Tony was just getting started as an entrepreneur! He started Mircom in 1991.",
+    "content2": "Today, Mircom stands as one of the fastest growing companies in the building solutions sector and the largest independent fire alarm manufacturer in North America. Our product line spans Fire Alarm and Emergency Audio, Communications, and Security and our brands include Mircom™ (our principal brand), Secutron™, and U.E.C.™ United Export Corporation. With a well-earned reputation for excellence, innovation and quality, we have consistently achieved double-digit annual growth.",
+    "content3": "Today, Mircom stands as one of the fastest growing companies in the building solutions sector and the largest independent fire alarm manufacturer in North America. Our product line spans Fire Alarm and Emergency Audio, Communications, and Security and our brands include Mircom™ (our principal brand), Secutron™, and U.E.C.™ United Export Corporation. With a well-earned reputation for excellence, innovation and quality, we have consistently achieved double-digit annual growth."
+  },
+  "camera": {
+    "camera": "Camera",
+    "recordedFeedProperties": "Recorded Feed Properties",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "editCamera": "Edit Camera",
+    "componentLibrary": "COMPONENT LIBRARY",
+    "tabInfo": "Tab Info",
+    "cameraProperties": "Camera Properties",
+    "archiveStartDateTime": "Archive Start Date Time",
+    "label": "Label",
+    "layout": "Layout",
+    "name": "Name",
+    "areyousureyouwanttodeletethistab": "Are you sure you want to delete this tab?",
+    "youWouldNotBeAbleToRevertThis": "You would not be able to revert this!",
+    "yesDeleteIt": "Yes, delete it!",
+    "areyousureyouwanttodeletethisframe": "Are you sure you want to delete this camera from the frame?",
+    "somethingwentwrongintheapi": "Something went wrong in the api",
+    "unabletoshowcamerafeed": "Unable to show camera feed"
+  },
+  "enums": {
+    "AccessPointWebCmd": {
+      "Grant Access": "Grant Access",
+      "UnLock Mode ON": "UnLock Mode ON",
+      "UnLock Mode OFF": "UnLock Mode OFF",
+      "High Sec Mode ON": "High Sec Mode ON",
+      "High Sec Mode OFF": "High Sec Mode OFF",
+      "Camera": "Camera",
+      "Map": "Map"
+    }
+  }
+
+}

@@ -1,0 +1,53 @@
+<div [className]="!isExpand ? 'table-container' : ''">
+  <div class="table-responsive">
+
+    <div class="material-datatables" *ngIf="eventsData">
+      <!--<div class="table-head">-->
+        <div [className]="!isExpand ? 'table-head' : 'table-head-expand'">
+          <table id="datatables" class="table table-box table-hover text-left" cellspacing="0" width="100%" style="width:100%">
+            <thead>
+              <tr>
+                <th>{{ 'monitoringEvent.time' | translate }}</th>
+                <th>{{ 'monitoringEvent.eventDescription' | translate }}</th>
+                <th>{{ 'monitoringEvent.panel' | translate }}</th>
+                <th class="disableRowMedia">{{ 'monitoringEvent.site' | translate }}</th>
+                <th>
+                  <span *ngIf="!isExpand" (click)="eventsExpand($event)" class="upward-button"><i title="{{ 'event.fullView' | translate }}" class="material-icons clsPointerCursor">arrow_upward</i></span>
+                  <span *ngIf="isExpand" (click)="eventsNotExpand($event)" class="downward-button"><i title="{{ 'event.hideFullView' | translate }}" class="material-icons clsPointerCursor">arrow_downward</i></span>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody *ngIf="!isExpand">
+              <tr [className]="row.severity == eventSeverity.warning ? 'warningCls': row.severity == eventSeverity.alarm  ? 'alarmCls' : 'normalCls'" *ngFor="let row of eventsData;let i=index">
+
+                <td *ngIf="i<10">{{row.utcTimeStamp | date: 'MM/dd/yy hh:mm:ss'}}</td>
+                <td *ngIf="i<10">{{row.description}}</td>
+                <td *ngIf="i<10">{{row.panelName}}</td>
+                <td class="disableRowMedia" *ngIf="i<10">{{row.siteName}}</td>
+                <td *ngIf="i<10">
+                  <a *ngIf="row.mapGuid != '00000000-0000-0000-0000-000000000000'" (click)="popUpMap($event,row.mapGuid,row.mapId)"> <i class="material-icons"> location_on </i> </a>
+                  <a *ngIf="row.channelGuid != '00000000-0000-0000-0000-000000000000'" (click)="popUpCamera($event,row.channelGuid,row.utcTimeStamp)"><i class="material-icons"> videocam </i> </a>
+                </td>
+              </tr>
+
+            </tbody>
+            <tbody *ngIf="isExpand">
+              <tr [className]="row.severity == eventSeverity.warning ? 'warningCls': row.severity == eventSeverity.alarm  ? 'alarmCls' : 'normalCls'" *ngFor="let row of eventsData;let i=index">
+                <td>{{row.utcTimeStamp | date: 'MM/dd/yy hh:mm:ss'}}</td>
+                <td>{{row.description}}</td>
+                <td>{{row.panelName}}</td>
+                <td class="disableRowMedia">{{row.siteName}}</td>
+                <td>
+                  <a *ngIf="row.mapGuid != '00000000-0000-0000-0000-000000000000'" (click)="popUpMap($event,row.mapGuid,row.mapId)" > <i class="material-icons"> location_on </i> </a>
+                  <a *ngIf="row.channelGuid != '00000000-0000-0000-0000-000000000000'" (click)="popUpCamera($event,row.channelGuid,row.utcTimeStamp)"> <i class="material-icons"> videocam </i> </a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>
+

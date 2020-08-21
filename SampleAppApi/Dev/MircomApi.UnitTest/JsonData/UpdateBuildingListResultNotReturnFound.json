@@ -1,0 +1,79 @@
+[
+  {
+    "buildingId": 0,
+    "buildingGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f158",
+    "siteId":-1,
+    "name": "Test site 2",
+    "number": 0,
+    "slots": 1,
+    "type": "SiteMap",
+    "floorStackFile": "",
+    "floorStackImage": null,
+    "showcaseFile": "http://localhost:60967/stock/images/maps/3058f837-a55a-435d-88a5-bfd391e9407f.jpeg",
+    "showcaseFileImage": null,
+    "floors": [
+      {
+        "name": "Test site 2",
+        "description": null,
+        "slotNo": 0,
+        "mapGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f159",
+        "mapId": 0,
+        "image": null,
+        "imageUrl": "http://localhost:60967/stock/images/maps/Sitemap.jpg",
+        "action": 0,
+        "mapItems": [
+          {
+            "siteId": 9,
+            "mapId": 0,
+            "mapItemId": 0,
+            "itemId": 0,
+            "itemGuid": "7ed0e003-45ef-4c93-b89f-05bf5047f157",
+            "panelGuid": null,
+            "name": "Main Building",
+            "notes": "Main Building",
+            "type": "Unknown",
+            "x": 69,
+            "y": 28,
+            "buildingId": null,
+            "action": null
+          },
+          {
+            "siteId": 9,
+            "mapId": 0,
+            "mapItemId": 1,
+            "itemId": 0,
+            "itemGuid": "af30f985-3e77-4bc5-8eaa-62ca11a7bf22",
+            "panelGuid": null,
+            "name": "North wing",
+            "notes": "North wing",
+            "type": "Unknown",
+            "x": 47,
+            "y": 35,
+            "buildingId": null,
+            "action": null
+          },
+          {
+            "siteId": 9,
+            "mapId": 0,
+            "mapItemId": 2,
+            "itemId": 0,
+            "itemGuid": "9dde48b7-af4b-4122-9fb6-62fab3845ce9",
+            "panelGuid": null,
+            "name": "South wing",
+            "notes": "South wing",
+            "type": "Unknown",
+            "x": 19,
+            "y": 58,
+            "buildingId": null,
+            "action": null
+          }
+        ]
+      }
+    ],
+    "action": 10,
+    "description": "test for site",
+    "buildingSerialNumber": 1,
+    "typeParseId": 0,
+    "isSelectedBuilding": false
+  }
+]

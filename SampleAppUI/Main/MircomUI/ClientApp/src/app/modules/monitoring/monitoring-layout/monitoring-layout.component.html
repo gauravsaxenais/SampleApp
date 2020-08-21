@@ -1,0 +1,57 @@
+<div class="nav-outer-div">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div mat-icon-button aria-label="Example icon-button with a menu"
+         style="width:100%;padding:0px 20px">
+      <mat-icon [matMenuTriggerFor]="menu" class="hamburger_menu">view_headline</mat-icon>
+      <div class="navbar-wrapper">
+        <a class="navbar-brand logo" [routerLink]="['/monitoring/dashboard']"> <img src="assets/img/logo.png" alt="Mircom" /> </a>
+      </div>
+    </div>
+    <mat-menu #menu="matMenu">
+      <app-monitoring-header></app-monitoring-header>
+    </mat-menu>
+  </nav>
+</div>
+
+<div class="content-wrapper">
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <!----  Responsive header start here   -->
+        <div class="responsive-menu">
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/dashboard']"><i class="material-icons">dashboard</i></button>
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/access-point']"><i class="material-icons"> exit_to_app </i></button>
+          <!--<button mat-button> <i class="material-icons" style="color:#ddd;pointer-events:none"> exit_to_app </i></button>-->
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/camera']"> <i class="material-icons">camera_alt</i></button>
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/chart']"><i class="material-icons"> show_chart </i></button>
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/event']"><i class="material-icons">event</i></button>
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/site-map']"><i class="material-icons"> map </i></button>
+          <button mat-button routerLinkActive="active" [routerLink]="['/monitoring/system']"><i class="material-icons"> Systems </i></button>
+
+        </div>
+
+        <div class="responsive-heading">
+          <h5> Dashboard </h5>
+        </div>
+        <!----  Responsive header end here   -->
+        <div class="left-wrapper" *ngIf="!isDisableLeftPanelDashboard">
+          <div class="left-side-container">
+            <app-monitoring-left-panel></app-monitoring-left-panel>
+          </div>
+        </div>
+
+
+        <div [ngClass]="isDisableLeftPanelDashboard?'right-wrapper-edit':'right-wrapper'">
+          <router-outlet></router-outlet>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

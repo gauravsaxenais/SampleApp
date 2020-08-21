@@ -1,0 +1,78 @@
+
+
+
+<div class="left-side-container">
+  <div class="sidebar" data-color="rose" data-background-color="black">
+
+
+    <div class="sidebar-wrapper">
+      <div class="user">
+        <div class="photo">
+          <img src="../assets/img/default-avatar.png">
+        </div>
+        <div class="user-info">
+          <a data-toggle="collapse" class="username">
+            <span>
+              {{userName}}
+            </span>
+          </a>
+
+        </div>
+      </div>
+      <ul class="nav">
+        <li [className]="'nav-item'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]="['/monitoring/dashboard']" class="nav-link">
+            <i class="material-icons">dashboard</i> <p> {{ 'monitoringLeftPanel.dashboard' | translate }} </p>
+          </a>
+        </li>
+
+        <li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/access-point']" class="nav-link">
+            <i class="material-icons"> exit_to_app </i><p> {{ 'monitoringLeftPanel.accessPoints' | translate }} </p>
+          </a>
+        </li>
+
+         <li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/camera']" class="nav-link" >
+            <i class="material-icons">camera_alt</i><p> {{ 'monitoringLeftPanel.camera' | translate }} </p>
+          </a>
+        </li>
+
+        <li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/chart']" class="nav-link">
+            <i class="material-icons"> show_chart </i><p> {{ 'monitoringLeftPanel.chart' | translate }}</p>
+          </a>
+        </li>
+
+        <li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/event']" class="nav-link">
+            <i class="material-icons">event</i><p> {{ 'monitoringLeftPanel.event' | translate }}</p>
+          </a>
+        </li>
+
+        <li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/site-map']" class="nav-link">
+            <i class="material-icons">location_on</i><p> {{ 'monitoringLeftPanel.maps' | translate }} </p>
+          </a>
+        </li>
+
+        <li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/system']" class="nav-link">
+            <i class="material-icons">computer</i><p> {{ 'monitoringLeftPanel.system' | translate }} </p>
+          </a>
+        </li>
+
+
+        <!--<li class="nav-item " routerLinkActive="active">
+          <a [routerLink]="['/monitoring/video-phone']" class="nav-link" >
+            <i class="material-icons"> videocam </i><p> Video Phone </p>
+          </a>
+        </li>-->
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+

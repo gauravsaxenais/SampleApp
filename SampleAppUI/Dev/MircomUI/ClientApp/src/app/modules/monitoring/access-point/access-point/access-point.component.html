@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="section-heading"> <h5> <span> <i class="material-icons">  exit_to_app  </i> </span>{{ 'accessPoint.accessPoints' | translate }} </h5> </div>
+  <div class="col-md-12 bottom-space" *ngIf="!isExpandable">
+    <div class="left-side-container">
+      <div class="card card-chart">
+        <div class="card-body table-responsive">
+          <app-monitoring-access-point></app-monitoring-access-point>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [ngClass]="isExpandable?'row':'row fixedfooter'">
+  <div class="col-md-12 eventTable">
+    <app-monitoring-event [eventsData]="eventsData" (eventExpandableChanged)="eventExpandableChangedHandler($event)"></app-monitoring-event>
+  </div>
+</div>

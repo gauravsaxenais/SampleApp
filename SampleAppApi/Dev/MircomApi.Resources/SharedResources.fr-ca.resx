@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Login_InCorrectUserNamePassword" xml:space="preserve">
+    <value>L'identifiant ou le mot de passe est incorrect</value>
+  </data>
+  <data name="Login_NullModel" xml:space="preserve">
+    <value>Le modèle de connexion est nul.</value>
+  </data>
+  <data name="Login_RequiredPassword" xml:space="preserve">
+    <value>Le champ Mot de passe est obligatoire.</value>
+  </data>
+  <data name="Login_RequiredUserName" xml:space="preserve">
+    <value>Le champ Nom d'utilisateur est obligatoire.</value>
+  </data>
+  <data name="Login_ValidUserName" xml:space="preserve">
+    <value>Le nom d'utilisateur est valide:</value>
+  </data>
+  <data name="Site_DuplicateSitesIssue" xml:space="preserve">
+    <value>Le nom du site doit être unique dans la liste de sites.</value>
+  </data>
+  <data name="Site_InternalIssue" xml:space="preserve">
+    <value>Un problème interne est survenu lors de la mise à jour des sites.</value>
+  </data>
+  <data name="Site_InvalidSiteId" xml:space="preserve">
+    <value>L'identifiant du site doit être supérieur à 0.</value>
+  </data>
+  <data name="Site_IssueDatabaseSites" xml:space="preserve">
+    <value>Un problème est survenu lors de la récupération des sites.</value>
+  </data>
+  <data name="Site_IssueDatabaseTemplates" xml:space="preserve">
+    <value>Un problème est survenu lors de l'extraction de la liste des modèles.</value>
+  </data>
+  <data name="Site_IssueUpload" xml:space="preserve">
+    <value>Un problème est survenu lors du téléchargement du site sur le serveur.</value>
+  </data>
+  <data name="Site_LargeFile" xml:space="preserve">
+    <value>S'il vous plaît télécharger un fichier jusqu'à 5 mb.</value>
+  </data>
+  <data name="Site_NoDataSites" xml:space="preserve">
+    <value>Il n'y a pas de sites dans le système.</value>
+  </data>
+  <data name="Site_NoDataSitesRequest" xml:space="preserve">
+    <value>Il n'y a pas de sites dans la demande de l'utilisateur.</value>
+  </data>
+  <data name="Site_NoDataTemplates" xml:space="preserve">
+    <value>Il n'y a pas de modèles dans le système.</value>
+  </data>
+  <data name="Site_SuccessfulUpdate" xml:space="preserve">
+    <value>La liste de sites est mise à jour avec succès.</value>
+  </data>
+  <data name="Site_SuccessUpload" xml:space="preserve">
+    <value>Le site a été téléchargé avec succès sur le serveur.</value>
+  </data>
+  <data name="Site_ValidBase64EncodedData" xml:space="preserve">
+    <value>Veuillez télécharger une chaîne encodée en base64 valide.</value>
+  </data>
+  <data name="System_NoDetails" xml:space="preserve">
+    <value>Il n'y a pas de détails système dans la base de données contre siteId.</value>
+  </data>
+  <data name="System_NoPanelDetails" xml:space="preserve">
+    <value>Il n'y a pas de détails sur les panneaux dans la base de données contre panelGuid.</value>
+  </data>
+  <data name="Dashboard_FailedExecution" xml:space="preserve">
+    <value>L'exécution de l'opération du widget a échoué.</value>
+  </data>
+  <data name="Dashboard_NoDetails" xml:space="preserve">
+    <value>Il n'y a pas de données de tableau de bord dans la base de données par rapport à siteId.</value>
+  </data>
+  <data name="Event_NoData" xml:space="preserve">
+    <value>Il n'y a pas d'événements dans le système.</value>
+  </data>
+  <data name="Dashboard_InvalidData" xml:space="preserve">
+    <value>Les données de tableau de bord fournies sont vides.</value>
+  </data>
+  <data name="Dashboard_InvalidGuid" xml:space="preserve">
+    <value>Le widget Guid n'est pas valide.</value>
+  </data>
+  <data name="Status_InvalidSiteBuildingId" xml:space="preserve">
+    <value>Les informations sur le site ou le bâtiment fournies ne sont pas valides.</value>
+  </data>
+  <data name="Status_InvalidSiteMapGuid" xml:space="preserve">
+    <value>Les informations de site et de carte ne sont pas valides.</value>
+  </data>
+  <data name="Status_NoData" xml:space="preserve">
+    <value>Il n'y a aucune information dans le système par rapport à l'identifiant de site et à l'identifiant de bâtiment.</value>
+  </data>
+  <data name="Status_NoStatusInformation" xml:space="preserve">
+    <value>Il n'y a pas d'informations d'état dans le système.</value>
+  </data>
+  <data name="Chart_InvalidRequest" xml:space="preserve">
+    <value>Les données de demande de graphique ne sont pas valides.</value>
+  </data>
+  <data name="Chart_NoChartData" xml:space="preserve">
+    <value>Il n'y a pas de données de graphique dans le système.</value>
+  </data>
+  <data name="Map_EmptyFloorMap" xml:space="preserve">
+    <value>Les informations de la carte d'étage sont vides.</value>
+  </data>
+  <data name="Map_InvalidBuildingUpdate" xml:space="preserve">
+    <value>Un problème est survenu lors de la mise à jour de la liste des bâtiments.</value>
+  </data>
+  <data name="Map_InvalidImageExtension" xml:space="preserve">
+    <value>Veuillez télécharger une image de type .jpg, .gif et .png.</value>
+  </data>
+  <data name="Map_InvalidSiteBuildingInformation" xml:space="preserve">
+    <value>Les informations sur le site ou le bâtiment fournies ne sont pas valides.</value>
+  </data>
+  <data name="Map_InvalidSiteType" xml:space="preserve">
+    <value>Les informations de site ou de type ne sont pas valides.</value>
+  </data>
+  <data name="Map_InvalidSize" xml:space="preserve">
+    <value>S'il vous plaît télécharger un fichier jusqu'à 5 mb.</value>
+  </data>
+  <data name="Map_IssueUpdatingFloor" xml:space="preserve">
+    <value>Il y a un problème de mise à jour de la carte au sol dans le système. Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="Map_NoBuildingInformation" xml:space="preserve">
+    <value>Il n'y a pas d'informations sur le bâtiment dans le système.</value>
+  </data>
+  <data name="Map_NoMapInformation" xml:space="preserve">
+    <value>Il n'y a pas d'informations cartographiques dans le système.</value>
+  </data>
+  <data name="Map_NoValidImage" xml:space="preserve">
+    <value>S'il vous plaît télécharger une image valide.</value>
+  </data>
+  <data name="Camera_InvalidCameraViewInformation" xml:space="preserve">
+    <value>Les informations fournies par la caméra ne sont pas valides.</value>
+  </data>
+  <data name="Camera_InvalidUpdate" xml:space="preserve">
+    <value>Il y a un problème de mise à jour des informations de la caméra. Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="Camera_InvalidChannelGuid" xml:space="preserve">
+    <value>Invalid Channel Guid</value>
+  </data>
+  <data name="INVALID" xml:space="preserve">
+    <value>Invalid</value>
+  </data>
+  <data name="MODEL_ID_BACNET_GATEWAY" xml:space="preserve">
+    <value>Mmodel ID Bacnet Gateway</value>
+  </data>
+  <data name="TX3_1000_LCD4" xml:space="preserve">
+    <value>TX3 1000 LCD4 fr</value>
+  </data>
+  <data name="TX3_1000_LCD8" xml:space="preserve">
+    <value>TX3 1000 LCD8 fr</value>
+  </data>
+  <data name="TX3_2000_LCD4" xml:space="preserve">
+    <value>TX3 2000 LCD4 fr</value>
+  </data>
+  <data name="TX3_2000_LCD8" xml:space="preserve">
+    <value>TX3 2000 LCD8 fr</value>
+  </data>
+  <data name="TX3_200_LCD4" xml:space="preserve">
+    <value>TX3 200 LCD4 fr</value>
+  </data>
+  <data name="TX3_200_LCD8" xml:space="preserve">
+    <value>TX3 200 LCD8 fr</value>
+  </data>
+  <data name="TX3_ASSA" xml:space="preserve">
+    <value>TX3 Assa fr</value>
+  </data>
+  <data name="TX3_CX_1DOOR" xml:space="preserve">
+    <value>TX3 CX 1 Door fr</value>
+  </data>
+  <data name="TX3_CX_2DOOR" xml:space="preserve">
+    <value>TX3 CX 2 Door fr</value>
+  </data>
+  <data name="TX3_ELEVATOR" xml:space="preserve">
+    <value>TX3 Elevator fr</value>
+  </data>
+  <data name="TX3_EMER_1S" xml:space="preserve">
+    <value>TX3 EMER 1S fr</value>
+  </data>
+  <data name="TX3_EMER_200KS" xml:space="preserve">
+    <value>TX3 EMER 200KS fr</value>
+  </data>
+  <data name="TX3_NANO" xml:space="preserve">
+    <value>TX3 Nano fr</value>
+  </data>
+  <data name="TX3_SYSTEM" xml:space="preserve">
+    <value>TX3 System fr</value>
+  </data>
+  <data name="TX3_TOUCH" xml:space="preserve">
+    <value>TX3 Touch fr</value>
+  </data>
+  <data name="Map_InvalidNumberOfBuilding" xml:space="preserve">
+    <value>The Site or Building information provided has invalid number of buildings.</value>
+  </data>
+  <data name="Map_InvalidNumberOfFloors" xml:space="preserve">
+    <value>The Site or Building information provided has invalid number of floors.</value>
+  </data>
+</root>
