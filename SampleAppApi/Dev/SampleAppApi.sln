@@ -3,26 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.WebApi", "MircomApi\SampleAppApi.WebApi.csproj", "{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.WebApi", "SampleAppApi\SampleAppApi.WebApi.csproj", "{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B} = {02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.BusinessObjects", "MircomApi.BusinessObjects\SampleAppApi.BusinessObjects.csproj", "{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.BusinessObjects", "SampleAppApi.BusinessObjects\SampleAppApi.BusinessObjects.csproj", "{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Services", "MircomApi.Services\SampleAppApi.Services.csproj", "{116CFE60-1E8A-44C3-9C1E-40A74112C69D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Services", "SampleAppApi.Services\SampleAppApi.Services.csproj", "{116CFE60-1E8A-44C3-9C1E-40A74112C69D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Util", "MircomApi.Util\SampleAppApi.Util.csproj", "{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Util", "SampleAppApi.Util\SampleAppApi.Util.csproj", "{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Entities", "MircomApi.Entities\SampleAppApi.Entities.csproj", "{1B6B2507-C7D4-4616-816A-620306B918C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Entities", "SampleAppApi.Entities\SampleAppApi.Entities.csproj", "{1B6B2507-C7D4-4616-816A-620306B918C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.DataAccess", "MircomApi.DataAccess\SampleAppApi.DataAccess.csproj", "{576E4CEC-DC63-4DE9-8A5C-E675417143DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.DataAccess", "SampleAppApi.DataAccess\SampleAppApi.DataAccess.csproj", "{576E4CEC-DC63-4DE9-8A5C-E675417143DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.DataAccess.StateManagement", "MircomApi.DataAccess.StateManagement\SampleAppApi.DataAccess.StateManagement.csproj", "{31962B80-EEA8-4186-A21E-2675259535A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.DataAccess.StateManagement", "SampleAppApi.DataAccess.StateManagement\SampleAppApi.DataAccess.StateManagement.csproj", "{31962B80-EEA8-4186-A21E-2675259535A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Resources", "MircomApi.Resources\SampleAppApi.Resources.csproj", "{EDEBF89E-5679-40AE-A742-3160A3169BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.Resources", "SampleAppApi.Resources\SampleAppApi.Resources.csproj", "{EDEBF89E-5679-40AE-A742-3160A3169BB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.UnitTest", "MircomApi.UnitTest\SampleAppApi.UnitTest.csproj", "{19A780E4-7B7F-4E7B-8B2D-B7175BE98EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAppApi.UnitTest", "SampleAppApi.UnitTest\SampleAppApi.UnitTest.csproj", "{19A780E4-7B7F-4E7B-8B2D-B7175BE98EFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

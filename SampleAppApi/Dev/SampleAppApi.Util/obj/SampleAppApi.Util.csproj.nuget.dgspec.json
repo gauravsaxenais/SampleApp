@@ -1,0 +1,387 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Util\\SampleAppApi.Util.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.BusinessObjects\\SampleAppApi.BusinessObjects.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.BusinessObjects\\SampleAppApi.BusinessObjects.csproj",
+        "projectName": "SampleAppApi.BusinessObjects",
+        "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.BusinessObjects\\SampleAppApi.BusinessObjects.csproj",
+        "packagesPath": "C:\\Users\\gaurav.saxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.BusinessObjects\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gaurav.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer-Prerelease/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Resources\\SampleAppApi.Resources.csproj": {
+                "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Resources\\SampleAppApi.Resources.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.DataAccess.StateManagement\\SampleAppApi.DataAccess.StateManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.DataAccess.StateManagement\\SampleAppApi.DataAccess.StateManagement.csproj",
+        "projectName": "SampleAppApi.DataAccess.StateManagement",
+        "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.DataAccess.StateManagement\\SampleAppApi.DataAccess.StateManagement.csproj",
+        "packagesPath": "C:\\Users\\gaurav.saxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.DataAccess.StateManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gaurav.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer-Prerelease/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Entities\\SampleAppApi.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Entities\\SampleAppApi.Entities.csproj",
+        "projectName": "SampleAppApi.Entities",
+        "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Entities\\SampleAppApi.Entities.csproj",
+        "packagesPath": "C:\\Users\\gaurav.saxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gaurav.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer-Prerelease/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.BusinessObjects\\SampleAppApi.BusinessObjects.csproj": {
+                "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.BusinessObjects\\SampleAppApi.BusinessObjects.csproj"
+              },
+              "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.DataAccess.StateManagement\\SampleAppApi.DataAccess.StateManagement.csproj": {
+                "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.DataAccess.StateManagement\\SampleAppApi.DataAccess.StateManagement.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Resources\\SampleAppApi.Resources.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Resources\\SampleAppApi.Resources.csproj",
+        "projectName": "SampleAppApi.Resources",
+        "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Resources\\SampleAppApi.Resources.csproj",
+        "packagesPath": "C:\\Users\\gaurav.saxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Resources\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gaurav.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer-Prerelease/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Util\\SampleAppApi.Util.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Util\\SampleAppApi.Util.csproj",
+        "projectName": "SampleAppApi.Util",
+        "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Util\\SampleAppApi.Util.csproj",
+        "packagesPath": "C:\\Users\\gaurav.saxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Util\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gaurav.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer-Prerelease/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AutoDataCorp/_packaging/DigitalDealer/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Entities\\SampleAppApi.Entities.csproj": {
+                "projectPath": "C:\\Projects\\SampleApp\\SampleAppApi\\Dev\\SampleAppApi.Entities\\SampleAppApi.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

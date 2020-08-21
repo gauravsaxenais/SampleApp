@@ -1,0 +1,139 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.WebApi", "MircomApi\MircomApi.WebApi.csproj", "{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B} = {02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.BusinessObjects", "MircomApi.BusinessObjects\MircomApi.BusinessObjects.csproj", "{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.Services", "MircomApi.Services\MircomApi.Services.csproj", "{116CFE60-1E8A-44C3-9C1E-40A74112C69D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.Util", "MircomApi.Util\MircomApi.Util.csproj", "{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.Entities", "MircomApi.Entities\MircomApi.Entities.csproj", "{1B6B2507-C7D4-4616-816A-620306B918C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.DataAccess", "MircomApi.DataAccess\MircomApi.DataAccess.csproj", "{576E4CEC-DC63-4DE9-8A5C-E675417143DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MircomApi.Test", "MircomApi.Test\MircomApi.Test.csproj", "{C51E1E6D-B3F1-440A-8C7E-24D1D79230BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F1161EA-4D7E-487C-85F9-0C86C98B60F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B9A0A2-0EAB-4951-BBD7-F2612F97D49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116CFE60-1E8A-44C3-9C1E-40A74112C69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116CFE60-1E8A-44C3-9C1E-40A74112C69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116CFE60-1E8A-44C3-9C1E-40A74112C69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116CFE60-1E8A-44C3-9C1E-40A74112C69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7D4D1D-27E3-4CD7-8616-37EB22E527B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B6B2507-C7D4-4616-816A-620306B918C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B6B2507-C7D4-4616-816A-620306B918C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B6B2507-C7D4-4616-816A-620306B918C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B6B2507-C7D4-4616-816A-620306B918C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576E4CEC-DC63-4DE9-8A5C-E675417143DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576E4CEC-DC63-4DE9-8A5C-E675417143DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576E4CEC-DC63-4DE9-8A5C-E675417143DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576E4CEC-DC63-4DE9-8A5C-E675417143DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51E1E6D-B3F1-440A-8C7E-24D1D79230BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51E1E6D-B3F1-440A-8C7E-24D1D79230BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51E1E6D-B3F1-440A-8C7E-24D1D79230BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51E1E6D-B3F1-440A-8C7E-24D1D79230BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0976234-741B-4C68-A82D-708B8B5E2545}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nod-tfs15vm:8080/tfs/mircom
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MircomApi\\MircomApi.WebApi.csproj
+		SccProjectName1 = MircomApi
+		SccLocalPath1 = MircomApi
+		SccProjectUniqueName2 = MircomApi.BusinessObjects\\MircomApi.BusinessObjects.csproj
+		SccProjectName2 = MircomApi.BusinessObjects
+		SccLocalPath2 = MircomApi.BusinessObjects
+		SccProjectUniqueName3 = MircomApi.Services\\MircomApi.Services.csproj
+		SccProjectName3 = MircomApi.Services
+		SccLocalPath3 = MircomApi.Services
+		SccProjectUniqueName4 = MircomApi.Util\\MircomApi.Util.csproj
+		SccProjectName4 = MircomApi.Util
+		SccLocalPath4 = MircomApi.Util
+		SccProjectUniqueName5 = MircomApi.Entities\\MircomApi.Entities.csproj
+		SccProjectName5 = MircomApi.Entities
+		SccLocalPath5 = MircomApi.Entities
+		SccProjectUniqueName6 = MircomApi.DataAccess\\MircomApi.DataAccess.csproj
+		SccProjectName6 = MircomApi.DataAccess
+		SccLocalPath6 = MircomApi.DataAccess
+		SccProjectUniqueName7 = MircomApi.Test\\MircomApi.Test.csproj
+		SccProjectName7 = MircomApi.Test
+		SccLocalPath7 = MircomApi.Test
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nod-tfs15vm:8080/tfs/mircom
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MircomApi\\MircomApi.WebApi.csproj
+		SccProjectName1 = MircomApi
+		SccLocalPath1 = MircomApi
+		SccProjectUniqueName2 = MircomApi.BusinessObjects\\MircomApi.BusinessObjects.csproj
+		SccProjectName2 = MircomApi.BusinessObjects
+		SccLocalPath2 = MircomApi.BusinessObjects
+		SccProjectUniqueName3 = MircomApi.Services\\MircomApi.Services.csproj
+		SccProjectName3 = MircomApi.Services
+		SccLocalPath3 = MircomApi.Services
+		SccProjectUniqueName4 = MircomApi.Test\\MircomApi.Tests.csproj
+		SccProjectName4 = MircomApi.Test
+		SccLocalPath4 = MircomApi.Test
+		SccProjectUniqueName5 = MircomApi.Util\\MircomApi.Util.csproj
+		SccProjectName5 = MircomApi.Util
+		SccLocalPath5 = MircomApi.Util
+		SccProjectUniqueName6 = MircomApi.Entities\\MircomApi.Entities.csproj
+		SccProjectName6 = MircomApi.Entities
+		SccLocalPath6 = MircomApi.Entities
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nod-tfs15vm:8080/tfs/mircom
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MircomApi.BusinessObjects\\MircomApi.BusinessObjects.csproj
+		SccProjectName1 = MircomApi.BusinessObjects
+		SccLocalPath1 = MircomApi.BusinessObjects
+		SccProjectUniqueName3 = MircomApi.Entities\\MircomApi.Entities.csproj
+		SccProjectName3 = MircomApi.Entities
+		SccLocalPath3 = MircomApi.Entities
+		SccProjectUniqueName4 = MircomApi.Services\\MircomApi.Services.csproj
+		SccProjectName4 = MircomApi.Services
+		SccLocalPath4 = MircomApi.Services
+		SccProjectUniqueName5 = MircomApi.Test\\MircomApi.Tests.csproj
+		SccProjectName5 = MircomApi.Test
+		SccLocalPath5 = MircomApi.Test
+		SccProjectUniqueName6 = MircomApi.Util\\MircomApi.Util.csproj
+		SccProjectName6 = MircomApi.Util
+		SccLocalPath6 = MircomApi.Util
+		SccProjectUniqueName7 = MircomApi\\MircomApi.WebApi.csproj
+		SccProjectName7 = MircomApi
+		SccLocalPath7 = MircomApi
+	EndGlobalSection
+EndGlobal

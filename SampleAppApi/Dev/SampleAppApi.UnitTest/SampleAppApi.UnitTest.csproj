@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CodeAnalysisRuleSet>..\SampleAppApi\SampleAppApi.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>..\SampleAppApi\SampleAppApi.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="nunit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SampleAppApi.DataAccess.StateManagement\SampleAppApi.DataAccess.StateManagement.csproj" />
+    <ProjectReference Include="..\SampleAppApi.DataAccess\SampleAppApi.DataAccess.csproj" />
+    <ProjectReference Include="..\SampleAppApi.Entities\SampleAppApi.Entities.csproj" />
+    <ProjectReference Include="..\SampleAppApi.Services\SampleAppApi.Services.csproj" />
+    <ProjectReference Include="..\SampleAppApi.Util\SampleAppApi.Util.csproj" />
+    <ProjectReference Include="..\SampleAppApi\SampleAppApi.WebApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Utility\ReadJsonFile.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>

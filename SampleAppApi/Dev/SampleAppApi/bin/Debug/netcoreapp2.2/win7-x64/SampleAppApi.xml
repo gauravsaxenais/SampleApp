@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SampleAppApi</name>
+    </assembly>
+    <members>
+        <member name="T:SampleAppApi.WebApi.Configuration.ServicesConfiguration">
+            <summary>
+            Services configuration class.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.ServicesConfiguration.AddSwaggerService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add swagger in pipeline using extension methods.
+            </summary>
+            <param name="services">services collection.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.ServicesConfiguration.AddCustomServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add our custom services here.
+            </summary>
+            <param name="services">services collection.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.ServicesConfiguration.AddJwtConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Jwt Configuration to be added to the pipeline.
+            </summary>
+            <param name="services">services collection.</param>
+            <param name="jwtConfiguration">configuration for jwt token.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.ServicesConfiguration.AddCorsPolicy(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add CORS policy for the project.
+            </summary>
+            <param name="services">services collection.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.ServicesConfiguration.AddLanguageSupport(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add language support for the SampleApp Website.
+            Currently two languages are there - english and french.
+            </summary>
+            <param name="services">services collection.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.ServicesConfiguration.AddAutoMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add our auto mapper here.
+            </summary>
+            <param name="services">services collection.</param>
+            <param name="configuration">configuration.</param>
+        </member>
+        <member name="T:SampleAppApi.WebApi.Configuration.SwaggerLanguageHeader">
+            <summary>
+            Language support for Swagger.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.SwaggerLanguageHeader.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SampleAppApi.WebApi.Configuration.SwaggerLanguageHeader"/> class.
+            </summary>
+            <param name="serviceProvider">service provider.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Configuration.SwaggerLanguageHeader.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SampleAppApi.WebApi.Controllers.AuthController">
+            <summary>
+            Auth controller - This controller provides
+            login, logout, change password functionality for a user.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Controllers.AuthController.#ctor(SampleAppApi.Services.Auth.IUserService,Microsoft.Extensions.Logging.ILogger{SampleAppApi.WebApi.Controllers.AuthController},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SampleAppApi.WebApi.Controllers.AuthController"/> class.
+            </summary>
+            <param name="userService">userService DAL layer.</param>
+            <param name="logger">nlog logger.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Controllers.AuthController.Post(SampleAppApi.BusinessObjects.Models.Login.LoginModel)">
+             <summary>
+             Returns true if login is successful.
+             </summary>
+             <remarks>
+             Sample login:
+            
+                 POST /auth/login
+                 {
+                    "Username": "administrator",
+                    "Password": ""
+                 }.
+            
+             </remarks>
+             <param name="login">The username and password.</param>
+             <returns>returns a token for validated user.</returns>
+             <response code="200">Success: Returns a token for a validated user.</response>
+             <response code="400">Bad request.</response>
+             <response code="401">Unauthorized: username and password doesn't match.</response>
+        </member>
+        <member name="T:SampleAppApi.WebApi.CustomWebHostService">
+            <summary>
+            CustomWebHostService.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.CustomWebHostService.#ctor(Microsoft.AspNetCore.Hosting.IWebHost)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SampleAppApi.WebApi.CustomWebHostService"/> class.
+            default constructor.
+            </summary>
+            <param name="host">host.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.CustomWebHostService.OnStarting(System.String[])">
+            <summary>
+            Onstarting.
+            </summary>
+            <param name="args">args.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.CustomWebHostService.OnStarted">
+            <summary>
+            Onstarted.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.CustomWebHostService.OnStopping">
+            <summary>
+            OnStopping.
+            </summary>
+        </member>
+        <member name="T:SampleAppApi.WebApi.Program">
+            <summary>
+            Driver class.
+            Middleware services are integrated here.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Program.Main(System.String[])">
+            <summary>
+            Represents entry point in the application.
+            </summary>
+            <param name="args">args array.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Program.BuildWebHost(System.String[])">
+            <summary>
+            Build web host.
+            </summary>
+            <param name="args">args from command line.</param>
+            <returns>iwebhost.</returns>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Program.BuildServiceWebHost(System.String[])">
+            <summary>
+            BuildServiceWebHost.
+            </summary>
+            <param name="args">args from the command line.</param>
+            <returns>Iwebhost.</returns>
+        </member>
+        <member name="T:SampleAppApi.WebApi.SharedResources">
+            <summary>
+            Dummy class to group shared resources.
+            </summary>
+        </member>
+        <member name="T:SampleAppApi.WebApi.Startup">
+            <summary>
+            Startup class.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SampleAppApi.WebApi.Startup"/> class.
+            </summary>
+            <param name="config">config.</param>
+        </member>
+        <member name="P:SampleAppApi.WebApi.Startup.Configuration">
+            <summary>
+            Gets Configuration.
+            </summary>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            This is the middleware.
+            </summary>
+            <param name="app">app variable.</param>
+            <param name="env">env variable.</param>
+        </member>
+        <member name="M:SampleAppApi.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">services collection.</param>
+            <returns>IServiceProvider.</returns>
+        </member>
+    </members>
+</doc>

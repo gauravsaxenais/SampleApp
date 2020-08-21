@@ -1,8 +1,0 @@
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\bin\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.deps.json
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\bin\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.dll
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\bin\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.pdb
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\obj\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.csprojAssemblyReference.cache
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\obj\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.AssemblyInfoInputs.cache
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\obj\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.AssemblyInfo.cs
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\obj\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.dll
-C:\Projects\SampleApp\SampleAppApi\Dev\MircomApi.DataAccess.StateManagement\obj\Debug\netcoreapp2.2\SampleAppApi.DataAccess.StateManagement.pdb
